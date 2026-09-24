@@ -1,35 +1,36 @@
-// PLACEHOLDER — ui-main replaces this with the title screen + game screen.
-import { useState } from 'react'
+// App shell: session resume → title screen or game screen, plus the dialog stack. OWNER: ui-main.
+import './ui/main/main.css'
+import './ui/main/title.css'
+import { useEffect } from 'react'
 import { useGame } from './core/store'
 import { useUI } from './core/ui'
-import { createNewGame } from './sim/newGame'
-import { useGameLoop } from './core/engine'
-import { useGS } from './core/store'
-import { formatDate } from './core/time'
-import { money } from './core/format'
+import { useSessionPersistence } from './core/session'
 import DialogHost from './ui/dialogs/DialogHost'
-import { Button, Panel } from './ui/kit'
-import { openDialog } from './core/ui'
+import GameScreen from './ui/main/GameScreen'
+import TitleScreen, { Logo } from './ui/main/TitleScreen'
 
-function Game() {
-  useGameLoop()
-  const day = useGS(s => s.day)
-  const cash = useGS(s => s.cash)
+function Splash() {
   return (
-    <div style={{ padding: 24, color: '#fff' }}>
-      <Panel title={`${formatDate(day)} — ${money(cash)}`}><Button onClick={() => openDialog('newLaunch')}>New launch</Button></Panel>
-      <DialogHost />
+    <div className="m-splash" aria-busy="true">
+      <Logo small />
+      <div className="m-splash-text">Warming up the fryer…</div>
     </div>
   )
 }
+
 export default function App() {
+  const resuming = useSessionPersistence()
   const screen = useUI(s => s.screen)
   const loaded = useGame(s => s.state !== null)
-  const [name] = useState('Hustle Co.')
-  if (screen === 'game' && loaded) return <Game />
+  const inGame = screen === 'game' && loaded
+  useEffect(() => {
+    document.body.classList.toggle('in-game', inGame)
+  }, [inGame])
+  if (resuming) return <Splash />
   return (
-    <div style={{ display: 'grid', placeItems: 'center', height: '100%' }}>
-      <Button size="lg" onClick={() => { useGame.getState().load(createNewGame({ company: name, founder: 'You', difficulty: 'normal' })); useUI.getState().set({ screen: 'game' }) }}>New game</Button>
-    </div>
+    <>
+      {inGame ? <GameScreen /> : <TitleScreen />}
+      <DialogHost />
+    </>
   )
 }

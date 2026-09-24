@@ -1,5 +1,23 @@
+/* Global base (ui-main). Component styles live in src/ui/main/*.css and src/ui/kit/kit.css. */
 *, *::before, *::after { box-sizing: border-box; }
 html, body, #root { height: 100%; margin: 0; }
-body { font-family: Fredoka, Inter, system-ui, sans-serif; background: #1b1530; color: #241a3d; -webkit-font-smoothing: antialiased; }
-button, input, select, textarea { font: inherit; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: Fredoka, Inter, system-ui, sans-serif; background: #1b1530; color: #241a3d;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body.in-game { overflow: hidden; }
+@media (max-width: 760px) { body.in-game { overflow: auto; } }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
 img { max-width: 100%; }
+::selection { background: rgba(124, 77, 255, .3); }
+:focus-visible { outline: 2.5px solid #9b7bff; outline-offset: 2px; }
+* { scrollbar-width: thin; scrollbar-color: rgba(124, 77, 255, .45) transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: rgba(124, 77, 255, .4); border-radius: 99px; border: 2px solid transparent; background-clip: padding-box; }
+::-webkit-scrollbar-track { background: transparent; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

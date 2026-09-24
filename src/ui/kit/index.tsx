@@ -46,3 +46,25 @@ export function DialogFrame({ title, subtitle, icon, onClose, footer, width, chi
 export function Tabs<T extends string>({ tabs, value, onChange }: { tabs: { id: T; label: ReactNode }[]; value: T; onChange: (t: T) => void }) {
   return <div className="k-tabs">{tabs.map(t => <button key={t.id} className={clsx('k-tab', value === t.id && 'on')} onClick={() => onChange(t.id)}>{t.label}</button>)}</div>
 }
+
+/** On/off switch. */
+export function Toggle({ checked, onChange, label, disabled }: { checked: boolean; onChange: (on: boolean) => void; label?: ReactNode; disabled?: boolean }) {
+  return (
+    <label className={clsx('k-toggle', checked && 'on', disabled && 'disabled')}>
+      <input type="checkbox" checked={checked} disabled={disabled} onChange={e => onChange(e.target.checked)} />
+      <span className="k-toggle-track" aria-hidden="true"><i /></span>
+      {label && <span className="k-toggle-label">{label}</span>}
+    </label>
+  )
+}
+/** Styled range slider (0..max). */
+export function Range({ value, onChange, min = 0, max = 1, step = 0.01, disabled, color = 'var(--k-purple)', label }: { value: number; onChange: (v: number) => void; min?: number; max?: number; step?: number; disabled?: boolean; color?: string; label?: string }) {
+  const pctFill = ((value - min) / (max - min || 1)) * 100
+  return (
+    <input
+      type="range" className="k-range" aria-label={label} min={min} max={max} step={step} value={value} disabled={disabled}
+      style={{ ['--fill' as string]: `${pctFill}%`, ['--c' as string]: color }}
+      onChange={e => onChange(Number(e.target.value))}
+    />
+  )
+}

@@ -19,4 +19,12 @@ Sibling project (the hardcore simulator): [Dropship Tycoon](https://github.com/n
 npm install
 npm run dev
 ```
+
+Checks:
+```bash
+npm run typecheck && npm test                  # types + sim unit tests
+npm run sim                                    # bot players vs the balance targets in DESIGN.md §10
+node scripts/e2e/qa-playthrough.cjs            # UI regression, desktop + phone (needs `npm run dev` on :5320)
+node scripts/e2e/final-playthrough.cjs 6       # 6-minute Normal playthrough at 4× → scripts/e2e/out/final-*.png
+```
 Design doc: [`DESIGN.md`](DESIGN.md).

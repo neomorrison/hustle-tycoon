@@ -222,3 +222,24 @@ stats 10–90 scaling with office tier & game year, salary ≈ $25 × (sum of st
 - *Random bot* (random combos/sliders, never kills/scales): ≤10% winners, stagnates or goes bankrupt within ~3 years.
 - A test launch flop costs ~$500–900; an early test winner nets ~$4–15k; standard hits $30–80k; big hits $200–600k; mega $1–5M.
 - Something noticeable should happen at least every ~20–40 s at 1×.
+
+## 11. As-built tuning (supersedes the numbers above)
+Balance passes with `npm run sim` moved several constants away from §2–§8. The code is the source of truth; every
+tuned value is marked `*` in its constant table (`TUNING` evaluate.ts, `DEV` launch.ts, `SALES` sales.ts, `ECONOMY`
+economy.ts, `data/sizes.ts`, `data/offices.ts`, `data/research.ts`).
+- **Sizes** (upfront / weekly ads / dev days / expected-points × / team cap / min office): test $300 / $700 / 28 / ×1 / 2 / 0 ·
+  standard $2,500 / $3,500 / 42 / ×2.5 / 4 / **Studio (2)** · big $15,000 / $17,500 / 70 / ×6.5 / 6 / 3 · mega $80,000 / $80,000 / 100 / ×13 / 8 / 5.
+  Research: Standard 90 RP · Big 300 RP + $5,000 · Mega 1,200 RP + $25,000.
+- **Offices**: moving in costs a one-off deposit, not 2× rent: $0 / $2,500 / $15,000 / $75,000 / $250,000 / $600,000. Rent and desks as §7.
+- **Market bar**: `nextMarketBar` closes 45% of the gap to the team's per-size output (down 50% only when reviews suffer),
+  max 2× jump per launch; reviews above 8.7 add hype (+12%/pt × size weight test .35 · standard .8 · big 1 · mega 1.2);
+  reviews under 7 relax it 4%/pt; +5%/yr floor; halved on the move back to Mom's. Starting bar: easy 40 · normal 50 · hard 57.
+- **Evaluation**: execution multipliers CTR ×1.6 / CVR ×1.5; price friction `(32/price)^0.8`; focus weight 0.45 on CTR/CVR
+  (0.2 on AOV): `metric × (1 − w + w·acc)`; ROAS/break-even soft cap (knee 2.1 → cap 3.0) via rising CPM; competition and
+  relaunch fatigue (+0.3 saturation per relaunch, −0.04/month).
+- **Sales**: learning week 0.85, 4-week plateau before decay, dampened weekly seasonality (BFCM full), launch buzz
+  (+25% organic per review point above 8, max +50%, over the first 4 weeks), scale caps test ×3 · standard ×2.5 · big/mega ×4.
+  Calls last **28 days**; refresh at 30% fatigue; "dead on arrival" kill call when week 1 is under half of break-even.
+- **Staff**: salary `16·Σstats + 0.036·Σstats²` (≈ $20–28 per stat point), +3% per level-up.
+- **World**: first trend in weeks 7–9 (then every 8–14 weeks); company-wide viral cooldown 5 weeks; milestones and
+  Coach Kev tips are spaced out (2 and 6 days).

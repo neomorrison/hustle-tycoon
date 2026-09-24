@@ -186,6 +186,16 @@ export interface Launch {
   review?: Review
   sales?: SalesRun
   postMortem?: PostMortem
+  /** (sim-core) status 'qc': true while Polish is running (bugs being removed each day) */
+  polishing?: boolean
+  /** (sim-core) max Polish days (25% of devDays) */
+  maxQcDays?: number
+  /** (sim-core) 🔴 removed by Polish so far */
+  bugsFixed?: number
+  /** (sim-core) upfront cost paid at start (for post-mortem totals) */
+  upfront?: number
+  /** (sim-core) 🧪 Quality points banked against future 🔴 complaints */
+  bugShield?: number
 }
 
 /** What the New Launch dialog submits */
@@ -220,10 +230,19 @@ export interface LaunchRecord {
   verdict: Verdict
   revenue: number
   profit: number
+  /** (sim-core, optional extras for history views) */
+  niche?: NicheId
+  priceTier?: PriceTier
+  review?: Review
+  postMortem?: PostMortem
+  /** weekly revenue per week of the run (sparkline) */
+  weeklyRevenue?: number[]
+  endReason?: 'faded' | 'killed'
 }
 
 export interface Playbook {
-  /** discovered combo ratings: keys 'pa:<productId>:<angle>', 'ap:<angle>:<platform>', 'np:<niche>:<platform>' */
+  /** discovered combo ratings: keys 'pa:<productId>:<angle>', 'ap:<angle>:<platform>', 'np:<niche>:<platform>'
+   *  (+ 'pp:<productId>:<platform>' for fadbook/tiktak, whose fit is per product — use evaluate/combos helpers) */
   combos: Record<string, ComboRating>
   /** best known focus distribution per angle (from good launches) */
   focus: Partial<Record<AngleId, { sliders: [number, number, number][]; accuracy: number }>>
@@ -313,6 +332,8 @@ export interface GameState {
   current: Launch | null
   live: Launch[]
   history: LaunchRecord[]
+  /** (sim-core) recently ended launches as full objects (newest last, capped) — post-mortem/detail source; see sim `findLaunch` */
+  archive?: Launch[]
   playbook: Playbook
   market: {
     /** GDT-style expectation bar: points the market expects for a standard launch (rises as you improve) */

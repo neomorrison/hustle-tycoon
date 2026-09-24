@@ -54,8 +54,8 @@
 .k-badge.gold { background: #fff3c4; color: #7a5200; }
 .k-statbar { height: 8px; border-radius: 99px; background: rgba(36, 26, 61, .1); overflow: hidden; }
 .k-statbar > i { display: block; height: 100%; border-radius: 99px; transition: width .4s ease; }
-.k-backdrop { position: fixed; inset: 0; background: rgba(20, 10, 40, .55); backdrop-filter: blur(3px); display: grid; place-items: center; z-index: 100; padding: 16px; animation: k-fade .15s ease; }
-.k-dialog { width: min(760px, 100%); max-height: calc(100vh - 32px); display: flex; flex-direction: column; animation: k-pop .22s cubic-bezier(.2, 1.4, .4, 1); }
+.k-backdrop { position: fixed; inset: 0; background: rgba(20, 10, 40, .55); backdrop-filter: blur(3px); display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; z-index: 100; padding: 16px; animation: k-fade .15s ease; }
+.k-dialog { width: min(760px, 100%); min-width: 0; max-height: calc(100vh - 32px); display: flex; flex-direction: column; animation: k-pop .22s cubic-bezier(.2, 1.4, .4, 1); }
 .k-dialog-head { display: flex; align-items: flex-start; gap: 12px; padding: 20px 22px 8px; }
 .k-dialog-title { font: 700 24px var(--k-font); margin: 0; line-height: 1.1; }
 .k-dialog-sub { font: 400 14px var(--k-font-data); color: var(--k-ink-2); margin-top: 4px; }
@@ -75,3 +75,33 @@
 .k-grid { display: grid; gap: 12px; }
 @keyframes k-fade { from { opacity: 0 } }
 @keyframes k-pop { from { opacity: 0; transform: scale(.94) translateY(8px) } }
+/* ---- additive (ui-main): toggle, range, tooltip ---- */
+.k-toggle { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; font: 500 15px var(--k-font); }
+.k-toggle.disabled { opacity: .5; cursor: not-allowed; }
+.k-toggle input { position: absolute; opacity: 0; width: 0; height: 0; }
+.k-toggle-track { position: relative; width: 44px; height: 26px; border-radius: 99px; background: #d9d2ea; transition: background .18s ease; flex: none; box-shadow: inset 0 2px 3px rgba(36, 26, 61, .15); }
+.k-toggle-track > i { position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: 0 2px 4px rgba(36, 26, 61, .3); transition: transform .22s cubic-bezier(.3, 1.6, .5, 1); }
+.k-toggle.on .k-toggle-track { background: var(--k-green); }
+.k-toggle.on .k-toggle-track > i { transform: translateX(18px); }
+.k-toggle input:focus-visible + .k-toggle-track { outline: 2px solid var(--k-purple); outline-offset: 2px; }
+.k-range { -webkit-appearance: none; appearance: none; width: 100%; height: 10px; border-radius: 99px; outline: none; cursor: pointer;
+  background: linear-gradient(90deg, var(--c) 0 var(--fill), rgba(36, 26, 61, .12) var(--fill) 100%); }
+.k-range:disabled { opacity: .45; cursor: not-allowed; }
+.k-range::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 3px solid var(--c); box-shadow: 0 2px 6px rgba(36, 26, 61, .3); transition: transform .12s ease; }
+.k-range::-webkit-slider-thumb:hover { transform: scale(1.12); }
+.k-range::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 3px solid var(--c); box-shadow: 0 2px 6px rgba(36, 26, 61, .3); }
+.k-range:focus-visible { outline: 2px solid var(--k-purple); outline-offset: 4px; }
+/* Tooltip: <el data-tip="text"> (add data-tip-pos="bottom|right|left" to change side) */
+:where([data-tip]) { position: relative; }
+[data-tip]:hover::after, [data-tip]:focus-visible::after {
+  content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translateX(-50%);
+  background: #241a3d; color: #fff; font: 500 12.5px/1.35 var(--k-font-data); padding: 6px 10px; border-radius: 8px;
+  white-space: pre-line; width: max-content; max-width: 240px; text-align: left; z-index: 60; pointer-events: none;
+  box-shadow: 0 6px 16px rgba(20, 10, 50, .3); animation: k-fade .12s ease;
+}
+[data-tip][data-tip-pos="bottom"]:hover::after, [data-tip][data-tip-pos="bottom"]:focus-visible::after { bottom: auto; top: calc(100% + 8px); }
+[data-tip][data-tip-pos="right"]:hover::after, [data-tip][data-tip-pos="right"]:focus-visible::after { bottom: auto; left: calc(100% + 10px); top: 50%; transform: translateY(-50%); }
+[data-tip][data-tip-pos="left"]:hover::after, [data-tip][data-tip-pos="left"]:focus-visible::after { bottom: auto; left: auto; right: calc(100% + 10px); top: 50%; transform: translateY(-50%); }
+[data-tip=""]:hover::after { display: none; }
+@media (hover: none) { [data-tip]:hover::after { display: none; } }
+@media (prefers-reduced-motion: reduce) { .k-dialog, .k-backdrop { animation: none; } }
