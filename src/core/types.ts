@@ -4,6 +4,7 @@
 // Time unit: in-game DAY since start. Calendar: 7-day weeks, 4 weeks/month,
 // 12 months/year (336 days/yr). Day 0 = Year 1, March, Week 1.
 // ============================================================================
+import type { Look } from '../three/types'
 
 export type NicheId =
   | 'pet' | 'beauty' | 'home' | 'kitchen' | 'fitness' | 'wellness'
@@ -75,6 +76,8 @@ export interface Person {
   /** in training: unavailable until this day */
   trainingUntil?: number
   trainingStat?: StatId
+  /** (ui-main) the founder's 3D look from the Look editor; missing = the 'founder' preset */
+  look?: Look
 }
 
 export interface Points {

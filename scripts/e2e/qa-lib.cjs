@@ -1,16 +1,37 @@
 // QA playtest helpers (Playwright). Uses the DEV-only window.__ht hook from src/main.tsx.
 const { chromium } = require('playwright')
 const path = require('path')
+const fs = require('fs')
 const URL = process.env.URL || 'http://localhost:5320/'
 const OUT = process.env.OUT || path.join(__dirname, 'tmp', 'qa')
+// GPU driver chatter from ANGLE/D3D shader compiles in the 3D office (three.js logs the HLSL compiler's warnings), not the game
+const GPU_NOISE = /X4122|X3557|Program Info Log|GPU stall due to ReadPixels|GL Driver Message|\[\.WebGL-/
+
+/** Playwright's own Chromium when its revision is installed, else the newest installed ms-playwright Chromium. */
+function executablePath() {
+  try {
+    const own = chromium.executablePath()
+    if (own && fs.existsSync(own)) return undefined
+  } catch { /* fall through */ }
+  const dir = process.env.PLAYWRIGHT_BROWSERS_PATH || path.join(process.env.LOCALAPPDATA || path.join(process.env.HOME || '', '.cache'), 'ms-playwright')
+  if (!fs.existsSync(dir)) return undefined
+  const cands = fs.readdirSync(dir).filter(d => /^chromium-\d+$/.test(d)).sort((a, b) => Number(b.split('-')[1]) - Number(a.split('-')[1]))
+  for (const d of cands) {
+    for (const rel of ['chrome-win64/chrome.exe', 'chrome-win/chrome.exe', 'chrome-linux/chrome', 'chrome-linux64/chrome', 'chrome-mac/Chromium.app/Contents/MacOS/Chromium']) {
+      const p = path.join(dir, d, rel)
+      if (fs.existsSync(p)) return p
+    }
+  }
+  return undefined
+}
 
 async function open({ width = 1440, height = 900, fresh = true } = {}) {
-  const browser = await chromium.launch()
+  const browser = await chromium.launch({ executablePath: executablePath() })
   const context = await browser.newContext({ viewport: { width, height }, deviceScaleFactor: 1 })
   const page = await context.newPage()
   const errs = []
   page.on('pageerror', e => errs.push('pageerror: ' + e.message + '\n' + (e.stack || '').split('\n').slice(0, 4).join('\n')))
-  page.on('console', m => { if (m.text().startsWith('scroller')) console.log(m.text()); if (m.type() === 'error' || m.type() === 'warning') errs.push(m.type() + ': ' + m.text()) })
+  page.on('console', m => { if (m.text().startsWith('scroller')) console.log(m.text()); if ((m.type() === 'error' || m.type() === 'warning') && !GPU_NOISE.test(m.text())) errs.push(m.type() + ': ' + m.text()) })
   await page.goto(URL, { waitUntil: 'networkidle' })
   if (fresh) {
     await page.evaluate(async () => {

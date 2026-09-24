@@ -1,5 +1,5 @@
 // Title screen: animated logo over the town, Continue / New game / Load (3 slots, import/export/delete) / Settings.
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import clsx from 'clsx'
 import { Dice5, Download, FolderOpen, Play, Settings, Trash, Upload } from 'lucide-react'
 import { openDialog } from '../../core/ui'
@@ -13,6 +13,13 @@ import { Button } from '../kit'
 import { playSfx } from '../audio'
 import { enterGame, useTitleNav } from './nav'
 import { randomCompany, randomFounder, timeAgo } from './names'
+import { presetLook } from '../../three/looks'
+import type { Look } from '../../three/types'
+import { use3d } from './three3d'
+
+// the 3D parts (three.js) load on demand; the painted still shows until they're ready
+const TitleCity = lazy(() => import('./TitleCity'))
+const LookEditor = lazy(() => import('./LookEditor'))
 
 // ---------------------------------------------------------------------------
 // Logo
@@ -90,7 +97,12 @@ const DIFF: { id: Difficulty; name: string; icon: string; cash: string; lines: s
   { id: 'hard', name: 'No Safety Net', icon: '🔥', cash: '$1,000', lines: ['Picky market from day one', 'Go bust = game over'] },
 ]
 
-function NewGamePanel({ saves, onBack }: { saves: (SaveMeta | null)[]; onBack: () => void }) {
+function NewGamePanel({ saves, onBack, onStep }: { saves: (SaveMeta | null)[]; onBack: () => void; onStep?: (step: 'info' | 'look') => void }) {
+  const can3d = use3d()
+  const [step, setStepRaw] = useState<'info' | 'look'>('info')
+  const setStep = (st: 'info' | 'look') => { setStepRaw(st); onStep?.(st) }
+  useEffect(() => () => onStep?.('info'), [onStep])
+  const [look, setLook] = useState<Look>(() => presetLook('founder'))
   const [company, setCompany] = useState(() => randomCompany())
   const [founder, setFounder] = useState(() => randomFounder())
   const [difficulty, setDifficulty] = useState<Difficulty>('normal')
@@ -104,7 +116,7 @@ function NewGamePanel({ saves, onBack }: { saves: (SaveMeta | null)[]; onBack: (
     setBusy(true)
     setErr('')
     try {
-      const st = createNewGame({ company: company.trim() || 'Hustle Co.', founder: founder.trim() || 'You', difficulty })
+      const st = createNewGame({ company: company.trim() || 'Hustle Co.', founder: founder.trim() || 'You', difficulty, look })
       playSfx('launch')
       await enterGame(st, slot)
     } catch (e) {
@@ -112,6 +124,23 @@ function NewGamePanel({ saves, onBack }: { saves: (SaveMeta | null)[]; onBack: (
       setBusy(false)
       playSfx('error')
     }
+  }
+  const clockIn = <Button type="submit" variant="gold" size="lg" disabled={busy}>{taken ? 'Overwrite & clock in ⚡' : 'Clock in ⚡'}</Button>
+  if (step === 'look' && can3d) {
+    return (
+      <form className="m-tpanel k-panel m-tpanel-look" onSubmit={e => { e.preventDefault(); void start() }}>
+        <div className="m-tpanel-head">
+          <h2>Your look</h2>
+          <p className="k-muted">{(founder.trim() || 'You')} at {company.trim() || 'Hustle Co.'}. Dress for the hustle you want.</p>
+        </div>
+        <Suspense fallback={<div className="m-look-wait" />}><LookEditor look={look} onChange={setLook} /></Suspense>
+        {err && <div className="m-warn bad">😵 {err}</div>}
+        <div className="m-tpanel-foot">
+          <Button variant="ghost" onClick={() => setStep('info')}>← Back</Button>
+          {clockIn}
+        </div>
+      </form>
+    )
   }
   return (
     <form className="m-tpanel k-panel" onSubmit={e => { e.preventDefault(); void start() }}>
@@ -159,7 +188,8 @@ function NewGamePanel({ saves, onBack }: { saves: (SaveMeta | null)[]; onBack: (
       {err && <div className="m-warn bad">😵 {err}</div>}
       <div className="m-tpanel-foot">
         <Button variant="ghost" onClick={onBack}>← Back</Button>
-        <Button type="submit" variant="gold" size="lg" disabled={busy}>{taken ? 'Overwrite & clock in ⚡' : 'Clock in ⚡'}</Button>
+        {can3d && <Button variant="secondary" size="lg" className="m-look-next" onClick={() => setStep('look')}>👕 Your look</Button>}
+        {clockIn}
       </div>
     </form>
   )
@@ -285,6 +315,10 @@ export default function TitleScreen() {
   const { saves, refresh } = useSaves()
   const [bgOk, setBgOk] = useState(true)
   const [busy, setBusy] = useState(false)
+  const live = use3d()
+  const [cityReady, setCityReady] = useState(false)
+  const [lookStep, setLookStep] = useState(false)
+  const onStep = useCallback((st: 'info' | 'look') => setLookStep(st === 'look'), [])
   useEffect(() => { void refresh() }, [panel, refresh])
 
   const latest = useMemo(() => {
@@ -307,7 +341,8 @@ export default function TitleScreen() {
 
   return (
     <div className={clsx('m-title', panel !== 'menu' && 'focus')}>
-      {bgOk && <img className="m-title-bg" src={roomImage('title')} alt="" onError={() => setBgOk(false)} draggable={false} />}
+      {bgOk && !(live && cityReady) && <img className="m-title-bg" src={roomImage('title')} alt="" onError={() => setBgOk(false)} draggable={false} />}
+      {live && <Suspense fallback={null}><TitleCity active={!lookStep} onReady={() => setCityReady(true)} /></Suspense>}
       <div className="m-title-sky" aria-hidden="true" />
       <Floaters />
       <div className="m-title-inner">
@@ -337,11 +372,11 @@ export default function TitleScreen() {
             </button>
             <button type="button" className="m-menu-btn" onClick={() => openDialog('settings')}>
               <span className="m-menu-ic"><Settings size={20} /></span>
-              <span className="m-menu-txt"><b>Settings</b><small>Sound & music</small></span>
+              <span className="m-menu-txt"><b>Settings</b><small>Sound, music & graphics</small></span>
             </button>
           </nav>
         )}
-        {panel === 'new' && saves && <NewGamePanel saves={saves} onBack={() => setPanel('menu')} />}
+        {panel === 'new' && saves && <NewGamePanel saves={saves} onBack={() => setPanel('menu')} onStep={onStep} />}
         {panel === 'load' && saves && <LoadPanel saves={saves} refresh={refresh} onBack={() => setPanel('menu')} />}
       </div>
       <footer className="m-credits">
