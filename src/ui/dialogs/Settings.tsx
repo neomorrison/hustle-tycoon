@@ -1,10 +1,13 @@
 // Settings: sound & music, coach tips, save/export/import, quit to title. OWNER: ui-main.
-import { useRef, useState } from 'react'
-import { Bell, Download, LogOut, Music, Save, Upload, Volume2 } from 'lucide-react'
+import { lazy, Suspense, useRef, useState } from 'react'
+import { Bell, Box, Download, Gauge, LogOut, Music, Save, Shirt, Upload, Volume2 } from 'lucide-react'
+import clsx from 'clsx'
 import type { DialogProps } from './types'
 import { DialogFrame, Button, Range, Toggle } from '../kit'
 import { act, getGS, useGame } from '../../core/store'
-import { useUI } from '../../core/ui'
+import { setGraphics, setOffice3d, useUI, type Graphics } from '../../core/ui'
+import type { Look } from '../../three/types'
+import { can3d, founderLook } from '../main/three3d'
 import { saveNow } from '../../core/session'
 import { exportSave, importSave } from '../../core/save'
 import { formatDate } from '../../core/time'
@@ -21,7 +24,36 @@ function Row({ icon, label, hint, children }: { icon: React.ReactNode; label: st
   )
 }
 
+const LookEditor = lazy(() => import('../main/LookEditor'))
+
+const GRAPHICS: [Graphics, string][] = [['auto', 'Auto'], ['high', 'High'], ['low', 'Low']]
+
+/** Settings → Edit look: the founder's look with a live preview. Saves into the game (founder.look). */
+function EditLook({ onDone }: { onDone: () => void }) {
+  const [look, setLook] = useState<Look>(() => founderLook(getGS().founder))
+  return (
+    <DialogFrame
+      title="Your look"
+      subtitle="Fresh fit, same hustle"
+      icon="👕"
+      width={880}
+      onClose={onDone}
+      footer={
+        <>
+          <Button variant="ghost" onClick={onDone}>Cancel</Button>
+          <Button variant="gold" onClick={() => { act(s => { s.founder.look = look }); playSfx('ping'); onDone() }}>Save look ✓</Button>
+        </>
+      }
+    >
+      <Suspense fallback={<div className="m-look-wait" />}><LookEditor look={look} onChange={setLook} /></Suspense>
+    </DialogFrame>
+  )
+}
+
 export default function SettingsDialog({ close }: DialogProps) {
+  const [view, setView] = useState<'main' | 'look'>('main')
+  const office3d = useUI(u => u.office3d)
+  const graphics = useUI(u => u.graphics)
   const inGame = useUI(u => u.screen === 'game')
   const slot = useUI(u => u.slot)
   const muted = useUI(u => u.muted)
@@ -38,6 +70,7 @@ export default function SettingsDialog({ close }: DialogProps) {
   const game = inGame && hasGame
 
   const say = (tone: 'good' | 'bad', text: string) => { setStatus({ tone, text }); playSfx(tone === 'good' ? 'ping' : 'error') }
+  const has3d = can3d()
 
   const doSave = async () => {
     try {
@@ -61,10 +94,12 @@ export default function SettingsDialog({ close }: DialogProps) {
     }
   }
 
+  if (view === 'look' && game && has3d) return <EditLook onDone={() => setView('main')} />
+
   return (
     <DialogFrame
       title="Settings"
-      subtitle={game ? `${company} · ${formatDate(day)} · slot ${slot + 1}` : 'Sound, music & saves'}
+      subtitle={game ? `${company} · ${formatDate(day)} · slot ${slot + 1}` : has3d ? 'Sound, music & graphics' : 'Sound, music & saves'}
       icon="⚙️"
       width={560}
       onClose={close}
@@ -95,6 +130,29 @@ export default function SettingsDialog({ close }: DialogProps) {
           <Button size="sm" variant="secondary" onClick={() => { unlockAudio(); playSfx('winner') }}>🏆 Fanfare</Button>
           <Button size="sm" variant="secondary" onClick={() => { unlockAudio(); playSfx('flop') }}>📉 Womp</Button>
         </div>
+
+        {has3d && (
+          <>
+            <h3 className="m-set-h">Graphics</h3>
+            <Row icon={<Box size={18} />} label="3D office" hint={office3d ? 'Live rooms and people' : 'Classic painted rooms'}>
+              <Toggle checked={office3d} onChange={on => setOffice3d(on)} />
+            </Row>
+            {office3d && (
+              <Row icon={<Gauge size={18} />} label="Graphics" hint={graphics === 'auto' ? 'Picks what runs smooth here' : graphics === 'high' ? 'Crisp edges, soft shadows' : 'Lighter on older laptops and phones'}>
+                <div className="m-seg" role="radiogroup" aria-label="Graphics">
+                  {GRAPHICS.map(([g, l]) => (
+                    <button key={g} type="button" role="radio" aria-checked={graphics === g} className={clsx('m-seg-btn', graphics === g && 'on')} onClick={() => setGraphics(g)}>{l}</button>
+                  ))}
+                </div>
+              </Row>
+            )}
+            {game && (
+              <Row icon={<Shirt size={18} />} label="Your look" hint="Hair, fit, extras">
+                <Button size="sm" variant="secondary" onClick={() => setView('look')}>👕 Edit look</Button>
+              </Row>
+            )}
+          </>
+        )}
 
         {game && (
           <>

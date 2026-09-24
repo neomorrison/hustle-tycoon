@@ -3,6 +3,8 @@ import { create } from 'zustand'
 import { useEffect } from 'react'
 
 export type Speed = 0 | 1 | 2 | 4
+/** Graphics preference for the 3D office ('auto' picks per device). */
+export type Graphics = 'auto' | 'high' | 'low'
 /** Dialog ids — see src/ui/dialogs/registry.ts */
 export type DialogId =
   | 'newLaunch' | 'sliders' | 'review' | 'postMortem' | 'research' | 'staff' | 'features'
@@ -21,6 +23,9 @@ interface UIStore {
   volume: number
   /** fraction of the current day elapsed (smooth progress bars) */
   dayFrac: number
+  /** live 3D office + title (falls back to the 2D art silently when the device can't) */
+  office3d: boolean
+  graphics: Graphics
   set: (p: Partial<UIStore>) => void
 }
 export const useUI = create<UIStore>()(set => ({
@@ -34,9 +39,43 @@ export const useUI = create<UIStore>()(set => ({
   musicOn: true,
   volume: 0.6,
   dayFrac: 0,
+  ...loadGfx(),
   set: p => set(p),
 }))
 export const ui = () => useUI.getState()
+
+// ---------------------------------------------------------------------------
+// 3D / graphics prefs: a per-browser convenience in localStorage (never required)
+// ---------------------------------------------------------------------------
+const GFX_KEY = 'hustle-tycoon:gfx'
+function loadGfx(): { office3d: boolean; graphics: Graphics } {
+  const d = { office3d: true, graphics: 'auto' as Graphics }
+  try {
+    const raw = typeof localStorage !== 'undefined' ? localStorage.getItem(GFX_KEY) : null
+    if (!raw) return d
+    const j = JSON.parse(raw) as Partial<{ office3d: boolean; graphics: Graphics }>
+    return {
+      office3d: typeof j.office3d === 'boolean' ? j.office3d : d.office3d,
+      graphics: j.graphics === 'high' || j.graphics === 'low' || j.graphics === 'auto' ? j.graphics : d.graphics,
+    }
+  } catch {
+    return d
+  }
+}
+function saveGfx() {
+  try {
+    const { office3d, graphics } = ui()
+    localStorage.setItem(GFX_KEY, JSON.stringify({ office3d, graphics }))
+  } catch { /* storage blocked: the choice lasts this session */ }
+}
+export function setOffice3d(on: boolean) {
+  ui().set({ office3d: on })
+  saveGfx()
+}
+export function setGraphics(g: Graphics) {
+  ui().set({ graphics: g })
+  saveGfx()
+}
 
 export function setSpeed(speed: Speed) {
   ui().set(speed === 0 ? { speed: 0 } : { speed, lastSpeed: speed })

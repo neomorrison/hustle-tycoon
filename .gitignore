@@ -5,3 +5,10 @@ dist
 *.log
 scripts/e2e/out
 scripts/e2e/tmp
+
+# 3D pipeline scratch
+blender/.previews
+blender/.out
+__pycache__
+*.pyc
+*.blend1

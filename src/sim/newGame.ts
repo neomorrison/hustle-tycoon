@@ -1,5 +1,6 @@
 // OWNER: sim-core (with sim-meta init hooks). Creates a fresh GameState.
 import type { Difficulty, GameState, PlatformId } from '../core/types'
+import type { Look } from '../three/types'
 import { emptyWeek } from '../core/money'
 import { coach } from '../core/notify'
 import { START_NICHES } from '../data/catalog'
@@ -9,7 +10,7 @@ import { COACH } from '../data/coach'
 import { refreshCandidates } from './staff'
 
 export const SAVE_VERSION = 1
-export interface NewGameOptions { company: string; founder: string; difficulty: Difficulty; seed?: number }
+export interface NewGameOptions { company: string; founder: string; difficulty: Difficulty; seed?: number; /** founder's 3D look (Look step) */ look?: Look }
 
 export const DIFFICULTY: Record<Difficulty, { cash: number; bar: number; label: string; blurb: string }> = {
   easy: { cash: 4000, bar: 40, label: 'Easy', blurb: '$4,000 saved up and a forgiving market. Mom\'s couch is always there.' },
@@ -31,7 +32,7 @@ export function createNewGame(o: NewGameOptions): GameState {
     day: 0, cash: d.cash, rp: 0, fans: 0, brand: 10,
     dayJob: { employed: true, monthly: 1600, quitDay: null, timesRejoined: 0 },
     office: 0,
-    founder: { id: 'founder', name: founder, portrait: 'player', role: 'founder', stats: { copy: 20, creative: 20, research: 15, speed: 20 }, level: 1, xp: 0, salary: 0, hiredDay: 0 },
+    founder: { id: 'founder', name: founder, portrait: 'player', role: 'founder', stats: { copy: 20, creative: 20, research: 15, speed: 20 }, level: 1, xp: 0, salary: 0, hiredDay: 0, ...(o.look ? { look: o.look } : {}) },
     staff: [], candidates: [],
     unlocked: { niches: [...START_NICHES], angles: [...START_ANGLES], platforms: ['fadbook'], sizes: ['test'], features: [], research: [] },
     activeFeatures: [],
