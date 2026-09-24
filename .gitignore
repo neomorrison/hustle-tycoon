@@ -1,0 +1,7 @@
+node_modules
+dist
+.snapshot
+.DS_Store
+*.log
+scripts/e2e/out
+scripts/e2e/tmp

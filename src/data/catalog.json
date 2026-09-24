@@ -1,0 +1,3136 @@
+[
+ {
+  "id": "pet-hair-roller",
+  "name": "Reusable Pet Hair Remover Roller",
+  "niche": "pet",
+  "archetype": "winner",
+  "cogs": 4.85,
+  "shipCost": 2.1,
+  "perceivedValue": 29.99,
+  "amazonPrice": 27.99,
+  "baseDemand": 0.88,
+  "wow": 0.78,
+  "problemSolving": 0.9,
+  "impulse": 0.85,
+  "giftable": 0.25,
+  "repeatRate": 0.02,
+  "audience": {
+   "gender": "female",
+   "ageMin": 25,
+   "ageMax": 54
+  },
+  "platformFit": {
+   "fadbook": 0.85,
+   "tiktak": 0.8
+  },
+  "bestAngles": [
+   "pet_love",
+   "pain_point",
+   "savings"
+  ],
+  "seasonality": [
+   0.95,
+   1,
+   1.15,
+   1.15,
+   1.1,
+   0.95,
+   0.9,
+   0.9,
+   1,
+   1.05,
+   1,
+   0.95
+  ],
+  "trendKind": "evergreen",
+  "competitors": 14,
+  "defectRate": 0.04,
+  "claimRisk": 0.02,
+  "rating": 4.8,
+  "brandable": 0.6
+ },
+ {
+  "id": "cat-water-fountain",
+  "name": "Flower Cat Water Fountain",
+  "niche": "pet",
+  "archetype": "solid",
+  "cogs": 7.2,
+  "shipCost": 3.2,
+  "perceivedValue": 34.99,
+  "amazonPrice": 29.99,
+  "baseDemand": 0.62,
+  "wow": 0.45,
+  "problemSolving": 0.6,
+  "impulse": 0.5,
+  "giftable": 0.2,
+  "repeatRate": 0.12,
+  "audience": {
+   "gender": "female",
+   "ageMin": 25,
+   "ageMax": 60
+  },
+  "platformFit": {
+   "fadbook": 0.8,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "pet_love",
+   "health",
+   "pain_point"
+  ],
+  "seasonality": [
+   0.95,
+   0.95,
+   1,
+   1,
+   1.05,
+   1.1,
+   1.1,
+   1.1,
+   1,
+   0.95,
+   0.95,
+   1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 22,
+  "defectRate": 0.05,
+  "claimRisk": 0.1,
+  "rating": 4.65,
+  "brandable": 0.55
+ },
+ {
+  "id": "dog-paw-cleaner",
+  "name": "Portable Dog Paw Cleaner Cup",
+  "niche": "pet",
+  "archetype": "winner",
+  "cogs": 3.9,
+  "shipCost": 2.4,
+  "perceivedValue": 29.99,
+  "amazonPrice": 24.99,
+  "baseDemand": 0.84,
+  "wow": 0.8,
+  "problemSolving": 0.85,
+  "impulse": 0.8,
+  "giftable": 0.2,
+  "repeatRate": 0.02,
+  "audience": {
+   "gender": "all",
+   "ageMin": 25,
+   "ageMax": 54
+  },
+  "platformFit": {
+   "fadbook": 0.8,
+   "tiktak": 0.85
+  },
+  "bestAngles": [
+   "pet_love",
+   "pain_point",
+   "convenience"
+  ],
+  "seasonality": [
+   1.1,
+   1.1,
+   1.2,
+   1.2,
+   1.05,
+   0.85,
+   0.85,
+   0.85,
+   0.95,
+   1.1,
+   1.15,
+   1.1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 9,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.75,
+  "brandable": 0.55
+ },
+ {
+  "id": "self-cleaning-brush",
+  "name": "Self-Cleaning Slicker Brush",
+  "niche": "pet",
+  "archetype": "saturated",
+  "cogs": 2.6,
+  "shipCost": 1.9,
+  "perceivedValue": 19.99,
+  "amazonPrice": 15.99,
+  "baseDemand": 0.74,
+  "wow": 0.55,
+  "problemSolving": 0.7,
+  "impulse": 0.8,
+  "giftable": 0.25,
+  "repeatRate": 0.01,
+  "audience": {
+   "gender": "female",
+   "ageMin": 25,
+   "ageMax": 54
+  },
+  "platformFit": {
+   "fadbook": 0.75,
+   "tiktak": 0.8
+  },
+  "bestAngles": [
+   "pet_love",
+   "convenience"
+  ],
+  "seasonality": [
+   0.95,
+   1,
+   1.15,
+   1.15,
+   1.1,
+   0.95,
+   0.9,
+   0.9,
+   1,
+   1.05,
+   1,
+   0.95
+  ],
+  "trendKind": "declining",
+  "competitors": 62,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.75,
+  "brandable": 0.3
+ },
+ {
+  "id": "cat-laser-toy",
+  "name": "Automatic Cat Laser Toy",
+  "niche": "pet",
+  "archetype": "solid",
+  "cogs": 5.4,
+  "shipCost": 2.6,
+  "perceivedValue": 24.99,
+  "amazonPrice": 21.99,
+  "baseDemand": 0.6,
+  "wow": 0.6,
+  "problemSolving": 0.5,
+  "impulse": 0.75,
+  "giftable": 0.35,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 18,
+   "ageMax": 45
+  },
+  "platformFit": {
+   "fadbook": 0.65,
+   "tiktak": 0.85
+  },
+  "bestAngles": [
+   "pet_love",
+   "time_saving",
+   "curiosity"
+  ],
+  "seasonality": [
+   1,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   1,
+   1,
+   1.1,
+   1.2
+  ],
+  "trendKind": "evergreen",
+  "competitors": 24,
+  "defectRate": 0.06,
+  "claimRisk": 0.05,
+  "rating": 4.55,
+  "brandable": 0.4
+ },
+ {
+  "id": "dog-car-hammock",
+  "name": "Dog Car Seat Hammock Cover",
+  "niche": "pet",
+  "archetype": "solid",
+  "cogs": 11,
+  "shipCost": 4.5,
+  "perceivedValue": 46.99,
+  "amazonPrice": 39.99,
+  "baseDemand": 0.6,
+  "wow": 0.4,
+  "problemSolving": 0.75,
+  "impulse": 0.45,
+  "giftable": 0.15,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 28,
+   "ageMax": 60
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.45
+  },
+  "bestAngles": [
+   "pet_love",
+   "pain_point",
+   "savings"
+  ],
+  "seasonality": [
+   0.9,
+   0.9,
+   1,
+   1.05,
+   1.1,
+   1.15,
+   1.15,
+   1.1,
+   1,
+   0.95,
+   0.95,
+   0.95
+  ],
+  "trendKind": "evergreen",
+  "competitors": 18,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.7,
+  "brandable": 0.5
+ },
+ {
+  "id": "pet-grooming-vacuum",
+  "name": "Pet Grooming Vacuum Kit",
+  "niche": "pet",
+  "archetype": "highticket",
+  "cogs": 26.9,
+  "shipCost": 5.9,
+  "perceivedValue": 179.99,
+  "amazonPrice": 149.99,
+  "baseDemand": 0.76,
+  "wow": 0.8,
+  "problemSolving": 0.85,
+  "impulse": 0.2,
+  "giftable": 0.2,
+  "repeatRate": 0.03,
+  "audience": {
+   "gender": "female",
+   "ageMin": 28,
+   "ageMax": 60
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "savings",
+   "pet_love",
+   "pain_point"
+  ],
+  "seasonality": [
+   0.95,
+   0.95,
+   1.1,
+   1.1,
+   1.05,
+   0.95,
+   0.9,
+   0.9,
+   1,
+   1,
+   1.05,
+   1.05
+  ],
+  "trendKind": "evergreen",
+  "competitors": 6,
+  "defectRate": 0.06,
+  "claimRisk": 0.03,
+  "rating": 4.75,
+  "brandable": 0.75
+ },
+ {
+  "id": "dog-lick-mat",
+  "name": "Dog Lick Mat",
+  "niche": "pet",
+  "archetype": "dud",
+  "cogs": 1.8,
+  "shipCost": 1.5,
+  "perceivedValue": 8.99,
+  "amazonPrice": 7.99,
+  "baseDemand": 0.35,
+  "wow": 0.3,
+  "problemSolving": 0.45,
+  "impulse": 0.8,
+  "giftable": 0.2,
+  "repeatRate": 0.02,
+  "audience": {
+   "gender": "female",
+   "ageMin": 25,
+   "ageMax": 50
+  },
+  "platformFit": {
+   "fadbook": 0.6,
+   "tiktak": 0.55
+  },
+  "bestAngles": [
+   "pet_love",
+   "convenience"
+  ],
+  "seasonality": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1.05,
+   1,
+   1,
+   1,
+   1,
+   1.05
+  ],
+  "trendKind": "evergreen",
+  "competitors": 20,
+  "defectRate": 0.04,
+  "claimRisk": 0.05,
+  "rating": 4.7,
+  "brandable": 0.2
+ },
+ {
+  "id": "ice-face-roller",
+  "name": "Ice Face Roller",
+  "niche": "beauty",
+  "archetype": "solid",
+  "cogs": 3.1,
+  "shipCost": 1.8,
+  "perceivedValue": 19.99,
+  "amazonPrice": 16.99,
+  "baseDemand": 0.6,
+  "wow": 0.5,
+  "problemSolving": 0.5,
+  "impulse": 0.8,
+  "giftable": 0.45,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 18,
+   "ageMax": 40
+  },
+  "platformFit": {
+   "fadbook": 0.6,
+   "tiktak": 0.85
+  },
+  "bestAngles": [
+   "self_care",
+   "aspirational"
+  ],
+  "seasonality": [
+   0.95,
+   1,
+   1,
+   1,
+   1.05,
+   1.2,
+   1.2,
+   1.15,
+   1,
+   0.95,
+   1,
+   1.1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 26,
+  "defectRate": 0.04,
+  "claimRisk": 0.25,
+  "rating": 4.7,
+  "brandable": 0.65
+ },
+ {
+  "id": "blackhead-vacuum",
+  "name": "Blackhead Remover Pore Vacuum",
+  "niche": "beauty",
+  "archetype": "trap",
+  "cogs": 5.6,
+  "shipCost": 2.2,
+  "perceivedValue": 39.99,
+  "amazonPrice": 29.99,
+  "baseDemand": 0.8,
+  "wow": 0.88,
+  "problemSolving": 0.7,
+  "impulse": 0.8,
+  "giftable": 0.2,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 16,
+   "ageMax": 34
+  },
+  "platformFit": {
+   "fadbook": 0.6,
+   "tiktak": 0.95
+  },
+  "bestAngles": [
+   "self_care",
+   "curiosity",
+   "pain_point"
+  ],
+  "seasonality": [
+   1,
+   1,
+   1,
+   1,
+   1.05,
+   1.05,
+   1.05,
+   1.05,
+   1,
+   1,
+   1,
+   1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 30,
+  "defectRate": 0.3,
+  "claimRisk": 0.55,
+  "rating": 4.6,
+  "brandable": 0.35
+ },
+ {
+  "id": "led-face-mask",
+  "name": "LED Light Therapy Face Mask",
+  "niche": "beauty",
+  "archetype": "highticket",
+  "cogs": 24.5,
+  "shipCost": 4.9,
+  "perceivedValue": 169.99,
+  "amazonPrice": 149.99,
+  "baseDemand": 0.76,
+  "wow": 0.85,
+  "problemSolving": 0.65,
+  "impulse": 0.25,
+  "giftable": 0.6,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 25,
+   "ageMax": 54
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.75
+  },
+  "bestAngles": [
+   "self_care",
+   "savings",
+   "aspirational"
+  ],
+  "seasonality": [
+   1.1,
+   1,
+   1,
+   1,
+   1.05,
+   0.95,
+   0.9,
+   0.9,
+   0.95,
+   1,
+   1.2,
+   1.35
+  ],
+  "trendKind": "evergreen",
+  "competitors": 8,
+  "defectRate": 0.06,
+  "claimRisk": 0.45,
+  "rating": 4.65,
+  "brandable": 0.85
+ },
+ {
+  "id": "heatless-curler",
+  "name": "Heatless Curling Rod Headband",
+  "niche": "beauty",
+  "archetype": "emerging",
+  "cogs": 1.9,
+  "shipCost": 1.4,
+  "perceivedValue": 18.99,
+  "amazonPrice": 15.99,
+  "baseDemand": 0.86,
+  "wow": 0.8,
+  "problemSolving": 0.65,
+  "impulse": 0.9,
+  "giftable": 0.4,
+  "repeatRate": 0.02,
+  "audience": {
+   "gender": "female",
+   "ageMin": 16,
+   "ageMax": 34
+  },
+  "platformFit": {
+   "fadbook": 0.55,
+   "tiktak": 0.95
+  },
+  "bestAngles": [
+   "self_care",
+   "time_saving",
+   "savings"
+  ],
+  "seasonality": [
+   1,
+   1,
+   1,
+   1,
+   1.05,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1.05,
+   1.1
+  ],
+  "trendKind": "rising",
+  "competitors": 3,
+  "defectRate": 0.04,
+  "claimRisk": 0.1,
+  "rating": 4.7,
+  "brandable": 0.55
+ },
+ {
+  "id": "scalp-massager",
+  "name": "Scalp Massager Shampoo Brush",
+  "niche": "beauty",
+  "archetype": "dud",
+  "cogs": 0.95,
+  "shipCost": 1.2,
+  "perceivedValue": 5.99,
+  "amazonPrice": 6.99,
+  "baseDemand": 0.32,
+  "wow": 0.25,
+  "problemSolving": 0.35,
+  "impulse": 0.8,
+  "giftable": 0.25,
+  "repeatRate": 0.02,
+  "audience": {
+   "gender": "female",
+   "ageMin": 18,
+   "ageMax": 45
+  },
+  "platformFit": {
+   "fadbook": 0.5,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "self_care",
+   "convenience"
+  ],
+  "seasonality": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1.05
+  ],
+  "trendKind": "evergreen",
+  "competitors": 16,
+  "defectRate": 0.03,
+  "claimRisk": 0.15,
+  "rating": 4.8,
+  "brandable": 0.25
+ },
+ {
+  "id": "teeth-whitening-kit",
+  "name": "LED Teeth Whitening Kit",
+  "niche": "beauty",
+  "archetype": "saturated",
+  "cogs": 5.8,
+  "shipCost": 2.1,
+  "perceivedValue": 29.99,
+  "amazonPrice": 24.99,
+  "baseDemand": 0.72,
+  "wow": 0.6,
+  "problemSolving": 0.6,
+  "impulse": 0.65,
+  "giftable": 0.2,
+  "repeatRate": 0.15,
+  "audience": {
+   "gender": "all",
+   "ageMin": 18,
+   "ageMax": 40
+  },
+  "platformFit": {
+   "fadbook": 0.75,
+   "tiktak": 0.85
+  },
+  "bestAngles": [
+   "self_care",
+   "savings",
+   "aspirational"
+  ],
+  "seasonality": [
+   1.05,
+   1.05,
+   1,
+   1,
+   1.1,
+   1.05,
+   1,
+   1,
+   0.95,
+   0.95,
+   1,
+   1.05
+  ],
+  "trendKind": "declining",
+  "competitors": 70,
+  "defectRate": 0.06,
+  "claimRisk": 0.5,
+  "rating": 4.5,
+  "brandable": 0.6
+ },
+ {
+  "id": "scalp-oil-applicator",
+  "name": "Scalp Oil Applicator Bottle",
+  "niche": "beauty",
+  "archetype": "dud",
+  "cogs": 0.85,
+  "shipCost": 1.1,
+  "perceivedValue": 4.99,
+  "amazonPrice": 5.99,
+  "baseDemand": 0.28,
+  "wow": 0.2,
+  "problemSolving": 0.3,
+  "impulse": 0.7,
+  "giftable": 0.05,
+  "repeatRate": 0.02,
+  "audience": {
+   "gender": "female",
+   "ageMin": 18,
+   "ageMax": 45
+  },
+  "platformFit": {
+   "fadbook": 0.45,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "self_care",
+   "convenience"
+  ],
+  "seasonality": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 9,
+  "defectRate": 0.06,
+  "claimRisk": 0.15,
+  "rating": 4.6,
+  "brandable": 0.25
+ },
+ {
+  "id": "nail-drill-kit",
+  "name": "Electric Nail Drill Kit",
+  "niche": "beauty",
+  "archetype": "solid",
+  "cogs": 9.8,
+  "shipCost": 2.9,
+  "perceivedValue": 39.99,
+  "amazonPrice": 34.99,
+  "baseDemand": 0.62,
+  "wow": 0.5,
+  "problemSolving": 0.6,
+  "impulse": 0.4,
+  "giftable": 0.35,
+  "repeatRate": 0.03,
+  "audience": {
+   "gender": "female",
+   "ageMin": 18,
+   "ageMax": 40
+  },
+  "platformFit": {
+   "fadbook": 0.65,
+   "tiktak": 0.8
+  },
+  "bestAngles": [
+   "savings",
+   "self_care",
+   "time_saving"
+  ],
+  "seasonality": [
+   0.95,
+   1,
+   1,
+   1,
+   1.05,
+   1,
+   0.95,
+   0.95,
+   1,
+   1,
+   1.05,
+   1.15
+  ],
+  "trendKind": "evergreen",
+  "competitors": 20,
+  "defectRate": 0.05,
+  "claimRisk": 0.05,
+  "rating": 4.6,
+  "brandable": 0.55
+ },
+ {
+  "id": "galaxy-projector",
+  "name": "Galaxy Star Projector",
+  "niche": "home",
+  "archetype": "seasonal",
+  "cogs": 8.9,
+  "shipCost": 3.2,
+  "perceivedValue": 44.99,
+  "amazonPrice": 36.99,
+  "baseDemand": 0.85,
+  "wow": 0.9,
+  "problemSolving": 0.2,
+  "impulse": 0.6,
+  "giftable": 0.9,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 18,
+   "ageMax": 44
+  },
+  "platformFit": {
+   "fadbook": 0.65,
+   "tiktak": 0.9
+  },
+  "bestAngles": [
+   "gift",
+   "aspirational",
+   "curiosity"
+  ],
+  "seasonality": [
+   0.45,
+   0.55,
+   0.3,
+   0.28,
+   0.28,
+   0.25,
+   0.25,
+   0.3,
+   0.4,
+   0.8,
+   1.65,
+   1.9
+  ],
+  "trendKind": "evergreen",
+  "competitors": 25,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.6,
+  "brandable": 0.5
+ },
+ {
+  "id": "sunset-lamp",
+  "name": "Sunset Projection Lamp",
+  "niche": "home",
+  "archetype": "saturated",
+  "cogs": 4.9,
+  "shipCost": 2.8,
+  "perceivedValue": 24.99,
+  "amazonPrice": 17.99,
+  "baseDemand": 0.7,
+  "wow": 0.7,
+  "problemSolving": 0.1,
+  "impulse": 0.8,
+  "giftable": 0.5,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 16,
+   "ageMax": 34
+  },
+  "platformFit": {
+   "fadbook": 0.5,
+   "tiktak": 0.9
+  },
+  "bestAngles": [
+   "aspirational",
+   "self_care",
+   "gift"
+  ],
+  "seasonality": [
+   0.95,
+   1,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   1,
+   1,
+   1.05,
+   1.1,
+   1.2
+  ],
+  "trendKind": "declining",
+  "competitors": 80,
+  "defectRate": 0.06,
+  "claimRisk": 0.02,
+  "rating": 4.6,
+  "brandable": 0.3
+ },
+ {
+  "id": "motion-cabinet-lights",
+  "name": "Motion Sensor Cabinet Lights",
+  "niche": "home",
+  "archetype": "solid",
+  "cogs": 6.4,
+  "shipCost": 2.6,
+  "perceivedValue": 29.99,
+  "amazonPrice": 24.99,
+  "baseDemand": 0.62,
+  "wow": 0.55,
+  "problemSolving": 0.65,
+  "impulse": 0.6,
+  "giftable": 0.2,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 25,
+   "ageMax": 60
+  },
+  "platformFit": {
+   "fadbook": 0.85,
+   "tiktak": 0.65
+  },
+  "bestAngles": [
+   "convenience",
+   "aspirational",
+   "pain_point"
+  ],
+  "seasonality": [
+   1.1,
+   1.05,
+   1,
+   0.95,
+   0.9,
+   0.9,
+   0.9,
+   0.95,
+   1,
+   1.1,
+   1.1,
+   1.1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 22,
+  "defectRate": 0.06,
+  "claimRisk": 0.02,
+  "rating": 4.6,
+  "brandable": 0.45
+ },
+ {
+  "id": "spin-scrubber",
+  "name": "Electric Spin Scrubber",
+  "niche": "home",
+  "archetype": "winner",
+  "cogs": 11.4,
+  "shipCost": 4.2,
+  "perceivedValue": 66.99,
+  "amazonPrice": 56.99,
+  "baseDemand": 0.9,
+  "wow": 0.85,
+  "problemSolving": 0.9,
+  "impulse": 0.5,
+  "giftable": 0.25,
+  "repeatRate": 0.02,
+  "audience": {
+   "gender": "female",
+   "ageMin": 28,
+   "ageMax": 65
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.8
+  },
+  "bestAngles": [
+   "time_saving",
+   "pain_point",
+   "convenience"
+  ],
+  "seasonality": [
+   1.1,
+   1.05,
+   1.2,
+   1.25,
+   1.1,
+   0.95,
+   0.9,
+   0.9,
+   0.95,
+   1,
+   1.1,
+   1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 12,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.75,
+  "brandable": 0.7
+ },
+ {
+  "id": "window-robot",
+  "name": "Window Cleaning Robot",
+  "niche": "home",
+  "archetype": "highticket",
+  "cogs": 34.9,
+  "shipCost": 7.6,
+  "perceivedValue": 199.99,
+  "amazonPrice": 179.99,
+  "baseDemand": 0.74,
+  "wow": 0.9,
+  "problemSolving": 0.7,
+  "impulse": 0.15,
+  "giftable": 0.35,
+  "repeatRate": 0.02,
+  "audience": {
+   "gender": "all",
+   "ageMin": 30,
+   "ageMax": 65
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.7
+  },
+  "bestAngles": [
+   "time_saving",
+   "savings",
+   "aspirational"
+  ],
+  "seasonality": [
+   0.9,
+   0.95,
+   1.2,
+   1.3,
+   1.2,
+   1,
+   0.9,
+   0.9,
+   1,
+   1,
+   1.1,
+   1.05
+  ],
+  "trendKind": "evergreen",
+  "competitors": 5,
+  "defectRate": 0.08,
+  "claimRisk": 0.02,
+  "rating": 4.55,
+  "brandable": 0.7
+ },
+ {
+  "id": "garment-steamer",
+  "name": "Portable Garment Steamer",
+  "niche": "home",
+  "archetype": "solid",
+  "cogs": 9.2,
+  "shipCost": 3.8,
+  "perceivedValue": 42.99,
+  "amazonPrice": 34.99,
+  "baseDemand": 0.6,
+  "wow": 0.5,
+  "problemSolving": 0.7,
+  "impulse": 0.45,
+  "giftable": 0.3,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 22,
+   "ageMax": 55
+  },
+  "platformFit": {
+   "fadbook": 0.8,
+   "tiktak": 0.7
+  },
+  "bestAngles": [
+   "time_saving",
+   "convenience"
+  ],
+  "seasonality": [
+   0.95,
+   0.95,
+   1,
+   1,
+   1.05,
+   1.1,
+   1.1,
+   1.05,
+   1,
+   0.95,
+   1,
+   1.1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 28,
+  "defectRate": 0.06,
+  "claimRisk": 0.02,
+  "rating": 4.6,
+  "brandable": 0.5
+ },
+ {
+  "id": "magnetic-screen-door",
+  "name": "Magnetic Screen Door",
+  "niche": "home",
+  "archetype": "seasonal",
+  "cogs": 5.1,
+  "shipCost": 2.9,
+  "perceivedValue": 29.99,
+  "amazonPrice": 24.99,
+  "baseDemand": 0.85,
+  "wow": 0.65,
+  "problemSolving": 0.85,
+  "impulse": 0.7,
+  "giftable": 0.05,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 28,
+   "ageMax": 65
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "pain_point",
+   "convenience",
+   "pet_love"
+  ],
+  "seasonality": [
+   0.2,
+   0.25,
+   0.45,
+   0.95,
+   1.6,
+   1.9,
+   1.9,
+   1.5,
+   0.9,
+   0.45,
+   0.25,
+   0.2
+  ],
+  "trendKind": "evergreen",
+  "competitors": 30,
+  "defectRate": 0.06,
+  "claimRisk": 0.02,
+  "rating": 4.5,
+  "brandable": 0.35
+ },
+ {
+  "id": "moon-lamp",
+  "name": "Levitating Moon Lamp",
+  "niche": "home",
+  "archetype": "trap",
+  "cogs": 15.8,
+  "shipCost": 4.8,
+  "perceivedValue": 109.99,
+  "amazonPrice": 89.99,
+  "baseDemand": 0.8,
+  "wow": 0.92,
+  "problemSolving": 0.05,
+  "impulse": 0.35,
+  "giftable": 0.8,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 18,
+   "ageMax": 44
+  },
+  "platformFit": {
+   "fadbook": 0.75,
+   "tiktak": 0.9
+  },
+  "bestAngles": [
+   "gift",
+   "aspirational",
+   "curiosity"
+  ],
+  "seasonality": [
+   0.8,
+   1.1,
+   0.85,
+   0.85,
+   0.9,
+   0.85,
+   0.8,
+   0.85,
+   0.9,
+   1,
+   1.3,
+   1.6
+  ],
+  "trendKind": "evergreen",
+  "competitors": 14,
+  "defectRate": 0.32,
+  "claimRisk": 0.02,
+  "rating": 4.7,
+  "brandable": 0.4
+ },
+ {
+  "id": "oil-sprayer",
+  "name": "Olive Oil Sprayer Bottle",
+  "niche": "kitchen",
+  "archetype": "dud",
+  "cogs": 2.4,
+  "shipCost": 2,
+  "perceivedValue": 9.99,
+  "amazonPrice": 8.99,
+  "baseDemand": 0.35,
+  "wow": 0.35,
+  "problemSolving": 0.4,
+  "impulse": 0.7,
+  "giftable": 0.1,
+  "repeatRate": 0.02,
+  "audience": {
+   "gender": "all",
+   "ageMin": 25,
+   "ageMax": 55
+  },
+  "platformFit": {
+   "fadbook": 0.6,
+   "tiktak": 0.55
+  },
+  "bestAngles": [
+   "health",
+   "convenience"
+  ],
+  "seasonality": [
+   1.05,
+   1,
+   1,
+   1,
+   1,
+   1.05,
+   1.05,
+   1,
+   1,
+   1,
+   1.05,
+   1.1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 30,
+  "defectRate": 0.06,
+  "claimRisk": 0.1,
+  "rating": 4.55,
+  "brandable": 0.25
+ },
+ {
+  "id": "veggie-chopper",
+  "name": "Multi Vegetable Chopper",
+  "niche": "kitchen",
+  "archetype": "saturated",
+  "cogs": 6.9,
+  "shipCost": 3.4,
+  "perceivedValue": 29.99,
+  "amazonPrice": 22.99,
+  "baseDemand": 0.74,
+  "wow": 0.65,
+  "problemSolving": 0.7,
+  "impulse": 0.6,
+  "giftable": 0.15,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 25,
+   "ageMax": 60
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.7
+  },
+  "bestAngles": [
+   "time_saving",
+   "convenience"
+  ],
+  "seasonality": [
+   1.1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1.05,
+   1.05
+  ],
+  "trendKind": "declining",
+  "competitors": 75,
+  "defectRate": 0.06,
+  "claimRisk": 0.02,
+  "rating": 4.6,
+  "brandable": 0.35
+ },
+ {
+  "id": "portable-blender",
+  "name": "Portable Blender Bottle",
+  "niche": "kitchen",
+  "archetype": "saturated",
+  "cogs": 6.3,
+  "shipCost": 2.9,
+  "perceivedValue": 29.99,
+  "amazonPrice": 24.99,
+  "baseDemand": 0.72,
+  "wow": 0.55,
+  "problemSolving": 0.45,
+  "impulse": 0.7,
+  "giftable": 0.35,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 18,
+   "ageMax": 40
+  },
+  "platformFit": {
+   "fadbook": 0.7,
+   "tiktak": 0.8
+  },
+  "bestAngles": [
+   "health",
+   "convenience",
+   "aspirational"
+  ],
+  "seasonality": [
+   1.15,
+   1.05,
+   1,
+   1,
+   1.05,
+   1.15,
+   1.15,
+   1.1,
+   0.95,
+   0.9,
+   0.9,
+   1
+  ],
+  "trendKind": "declining",
+  "competitors": 88,
+  "defectRate": 0.07,
+  "claimRisk": 0.08,
+  "rating": 4.5,
+  "brandable": 0.45
+ },
+ {
+  "id": "milk-frother",
+  "name": "Handheld Milk Frother",
+  "niche": "kitchen",
+  "archetype": "dud",
+  "cogs": 1.6,
+  "shipCost": 1.4,
+  "perceivedValue": 7.99,
+  "amazonPrice": 7.99,
+  "baseDemand": 0.3,
+  "wow": 0.4,
+  "problemSolving": 0.3,
+  "impulse": 0.8,
+  "giftable": 0.25,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 22,
+   "ageMax": 50
+  },
+  "platformFit": {
+   "fadbook": 0.55,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "convenience",
+   "savings"
+  ],
+  "seasonality": [
+   1.05,
+   1,
+   1,
+   1,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   1,
+   1.05,
+   1.05,
+   1.1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 25,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.7,
+  "brandable": 0.2
+ },
+ {
+  "id": "ice-ball-maker",
+  "name": "Crystal Clear Ice Ball Maker",
+  "niche": "kitchen",
+  "archetype": "solid",
+  "cogs": 4.2,
+  "shipCost": 2.5,
+  "perceivedValue": 22.99,
+  "amazonPrice": 19.99,
+  "baseDemand": 0.58,
+  "wow": 0.65,
+  "problemSolving": 0.2,
+  "impulse": 0.6,
+  "giftable": 0.6,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "male",
+   "ageMin": 25,
+   "ageMax": 55
+  },
+  "platformFit": {
+   "fadbook": 0.85,
+   "tiktak": 0.65
+  },
+  "bestAngles": [
+   "aspirational",
+   "gift",
+   "curiosity"
+  ],
+  "seasonality": [
+   0.95,
+   0.9,
+   0.9,
+   0.95,
+   1.05,
+   1.25,
+   1.05,
+   1,
+   0.95,
+   1,
+   1.1,
+   1.35
+  ],
+  "trendKind": "evergreen",
+  "competitors": 12,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.5,
+  "brandable": 0.55
+ },
+ {
+  "id": "gravity-grinder",
+  "name": "Gravity Electric Salt & Pepper Grinder",
+  "niche": "kitchen",
+  "archetype": "winner",
+  "cogs": 7.4,
+  "shipCost": 2.8,
+  "perceivedValue": 44.99,
+  "amazonPrice": 39.99,
+  "baseDemand": 0.86,
+  "wow": 0.8,
+  "problemSolving": 0.4,
+  "impulse": 0.6,
+  "giftable": 0.75,
+  "repeatRate": 0.02,
+  "audience": {
+   "gender": "all",
+   "ageMin": 25,
+   "ageMax": 55
+  },
+  "platformFit": {
+   "fadbook": 0.85,
+   "tiktak": 0.85
+  },
+  "bestAngles": [
+   "gift",
+   "convenience",
+   "aspirational"
+  ],
+  "seasonality": [
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   1,
+   1.05,
+   0.95,
+   0.95,
+   1,
+   1.05,
+   1.25,
+   1.45
+  ],
+  "trendKind": "evergreen",
+  "competitors": 10,
+  "defectRate": 0.06,
+  "claimRisk": 0.02,
+  "rating": 4.7,
+  "brandable": 0.6
+ },
+ {
+  "id": "herb-keeper",
+  "name": "Fresh Herb Keeper",
+  "niche": "kitchen",
+  "archetype": "dud",
+  "cogs": 3.8,
+  "shipCost": 2.6,
+  "perceivedValue": 11.99,
+  "amazonPrice": 12.99,
+  "baseDemand": 0.28,
+  "wow": 0.25,
+  "problemSolving": 0.4,
+  "impulse": 0.5,
+  "giftable": 0.1,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 30,
+   "ageMax": 60
+  },
+  "platformFit": {
+   "fadbook": 0.65,
+   "tiktak": 0.45
+  },
+  "bestAngles": [
+   "savings",
+   "convenience"
+  ],
+  "seasonality": [
+   1,
+   1,
+   1,
+   1,
+   1.05,
+   1.05,
+   1.05,
+   1,
+   1,
+   1,
+   0.95,
+   1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 6,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.6,
+  "brandable": 0.2
+ },
+ {
+  "id": "posture-corrector",
+  "name": "Adjustable Posture Corrector",
+  "niche": "wellness",
+  "archetype": "winner",
+  "cogs": 3.4,
+  "shipCost": 1.9,
+  "perceivedValue": 24.99,
+  "amazonPrice": 21.99,
+  "baseDemand": 0.84,
+  "wow": 0.55,
+  "problemSolving": 0.85,
+  "impulse": 0.75,
+  "giftable": 0.1,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 25,
+   "ageMax": 55
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.75
+  },
+  "bestAngles": [
+   "pain_point",
+   "health",
+   "self_care"
+  ],
+  "seasonality": [
+   1.25,
+   1.1,
+   1,
+   1,
+   0.95,
+   0.9,
+   0.9,
+   0.95,
+   1.1,
+   1.05,
+   0.95,
+   0.9
+  ],
+  "trendKind": "evergreen",
+  "competitors": 25,
+  "defectRate": 0.05,
+  "claimRisk": 0.3,
+  "rating": 4.6,
+  "brandable": 0.6
+ },
+ {
+  "id": "neck-massager",
+  "name": "Cordless Shiatsu Neck Massager",
+  "niche": "wellness",
+  "archetype": "highticket",
+  "cogs": 16.8,
+  "shipCost": 4.6,
+  "perceivedValue": 109.99,
+  "amazonPrice": 89.99,
+  "baseDemand": 0.78,
+  "wow": 0.7,
+  "problemSolving": 0.85,
+  "impulse": 0.3,
+  "giftable": 0.75,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 30,
+   "ageMax": 65
+  },
+  "platformFit": {
+   "fadbook": 0.95,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "pain_point",
+   "self_care",
+   "gift"
+  ],
+  "seasonality": [
+   0.95,
+   1,
+   0.95,
+   0.95,
+   1.15,
+   1.1,
+   0.9,
+   0.9,
+   0.95,
+   1,
+   1.25,
+   1.5
+  ],
+  "trendKind": "evergreen",
+  "competitors": 11,
+  "defectRate": 0.06,
+  "claimRisk": 0.3,
+  "rating": 4.7,
+  "brandable": 0.75
+ },
+ {
+  "id": "mini-massage-gun",
+  "name": "Mini Massage Gun",
+  "niche": "fitness",
+  "archetype": "saturated",
+  "cogs": 9.8,
+  "shipCost": 3.2,
+  "perceivedValue": 44.99,
+  "amazonPrice": 34.99,
+  "baseDemand": 0.72,
+  "wow": 0.55,
+  "problemSolving": 0.65,
+  "impulse": 0.5,
+  "giftable": 0.6,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 18,
+   "ageMax": 45
+  },
+  "platformFit": {
+   "fadbook": 0.75,
+   "tiktak": 0.8
+  },
+  "bestAngles": [
+   "pain_point",
+   "self_care",
+   "gift"
+  ],
+  "seasonality": [
+   1.15,
+   1,
+   1,
+   1,
+   1,
+   0.95,
+   0.9,
+   0.95,
+   1,
+   1,
+   1.2,
+   1.3
+  ],
+  "trendKind": "declining",
+  "competitors": 82,
+  "defectRate": 0.06,
+  "claimRisk": 0.2,
+  "rating": 4.6,
+  "brandable": 0.55
+ },
+ {
+  "id": "smart-jump-rope",
+  "name": "Smart Counting Jump Rope",
+  "niche": "fitness",
+  "archetype": "solid",
+  "cogs": 5.9,
+  "shipCost": 2.5,
+  "perceivedValue": 24.99,
+  "amazonPrice": 21.99,
+  "baseDemand": 0.6,
+  "wow": 0.45,
+  "problemSolving": 0.5,
+  "impulse": 0.6,
+  "giftable": 0.3,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 18,
+   "ageMax": 40
+  },
+  "platformFit": {
+   "fadbook": 0.6,
+   "tiktak": 0.8
+  },
+  "bestAngles": [
+   "health",
+   "time_saving",
+   "aspirational"
+  ],
+  "seasonality": [
+   1.5,
+   1.2,
+   1.1,
+   1.1,
+   1.1,
+   1,
+   0.85,
+   0.85,
+   0.95,
+   0.9,
+   0.85,
+   0.95
+  ],
+  "trendKind": "evergreen",
+  "competitors": 14,
+  "defectRate": 0.06,
+  "claimRisk": 0.15,
+  "rating": 4.5,
+  "brandable": 0.45
+ },
+ {
+  "id": "ab-roller",
+  "name": "Auto-Rebound Ab Roller",
+  "niche": "fitness",
+  "archetype": "seasonal",
+  "cogs": 7.6,
+  "shipCost": 3.9,
+  "perceivedValue": 44.99,
+  "amazonPrice": 36.99,
+  "baseDemand": 0.85,
+  "wow": 0.6,
+  "problemSolving": 0.6,
+  "impulse": 0.55,
+  "giftable": 0.15,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 18,
+   "ageMax": 45
+  },
+  "platformFit": {
+   "fadbook": 0.75,
+   "tiktak": 0.85
+  },
+  "bestAngles": [
+   "health",
+   "aspirational",
+   "time_saving"
+  ],
+  "seasonality": [
+   2,
+   1.5,
+   1.1,
+   1,
+   0.9,
+   0.7,
+   0.4,
+   0.38,
+   0.45,
+   0.4,
+   0.45,
+   0.95
+  ],
+  "trendKind": "evergreen",
+  "competitors": 16,
+  "defectRate": 0.05,
+  "claimRisk": 0.25,
+  "rating": 4.6,
+  "brandable": 0.5
+ },
+ {
+  "id": "resistance-bands",
+  "name": "Resistance Bands Set",
+  "niche": "fitness",
+  "archetype": "dud",
+  "cogs": 4.1,
+  "shipCost": 2.6,
+  "perceivedValue": 14.99,
+  "amazonPrice": 11.99,
+  "baseDemand": 0.35,
+  "wow": 0.25,
+  "problemSolving": 0.4,
+  "impulse": 0.6,
+  "giftable": 0.15,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 18,
+   "ageMax": 45
+  },
+  "platformFit": {
+   "fadbook": 0.6,
+   "tiktak": 0.65
+  },
+  "bestAngles": [
+   "health",
+   "savings"
+  ],
+  "seasonality": [
+   1.4,
+   1.15,
+   1.05,
+   1.05,
+   1.05,
+   1,
+   0.9,
+   0.9,
+   0.95,
+   0.9,
+   0.85,
+   0.9
+  ],
+  "trendKind": "evergreen",
+  "competitors": 35,
+  "defectRate": 0.04,
+  "claimRisk": 0.1,
+  "rating": 4.7,
+  "brandable": 0.35
+ },
+ {
+  "id": "acupressure-mat",
+  "name": "Acupressure Mat & Pillow Set",
+  "niche": "wellness",
+  "archetype": "solid",
+  "cogs": 8.2,
+  "shipCost": 4,
+  "perceivedValue": 42.99,
+  "amazonPrice": 32.99,
+  "baseDemand": 0.58,
+  "wow": 0.4,
+  "problemSolving": 0.65,
+  "impulse": 0.4,
+  "giftable": 0.35,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 25,
+   "ageMax": 60
+  },
+  "platformFit": {
+   "fadbook": 0.85,
+   "tiktak": 0.55
+  },
+  "bestAngles": [
+   "self_care",
+   "pain_point",
+   "health"
+  ],
+  "seasonality": [
+   1.15,
+   1.05,
+   1,
+   1,
+   1,
+   0.95,
+   0.9,
+   0.9,
+   1,
+   1,
+   1.05,
+   1.1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 13,
+  "defectRate": 0.04,
+  "claimRisk": 0.35,
+  "rating": 4.6,
+  "brandable": 0.55
+ },
+ {
+  "id": "mouth-tape",
+  "name": "Sleep Mouth Tape (90 strips)",
+  "niche": "wellness",
+  "archetype": "emerging",
+  "cogs": 2.7,
+  "shipCost": 1.3,
+  "perceivedValue": 19.99,
+  "amazonPrice": 17.99,
+  "baseDemand": 0.84,
+  "wow": 0.55,
+  "problemSolving": 0.7,
+  "impulse": 0.8,
+  "giftable": 0.05,
+  "repeatRate": 0.35,
+  "audience": {
+   "gender": "all",
+   "ageMin": 25,
+   "ageMax": 55
+  },
+  "platformFit": {
+   "fadbook": 0.75,
+   "tiktak": 0.9
+  },
+  "bestAngles": [
+   "health",
+   "curiosity",
+   "self_care"
+  ],
+  "seasonality": [
+   1.1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "trendKind": "rising",
+  "competitors": 2,
+  "defectRate": 0.03,
+  "claimRisk": 0.4,
+  "rating": 4.6,
+  "brandable": 0.75
+ },
+ {
+  "id": "sunrise-alarm",
+  "name": "Sunrise Alarm Clock",
+  "niche": "wellness",
+  "archetype": "seasonal",
+  "cogs": 9.8,
+  "shipCost": 3.5,
+  "perceivedValue": 54.99,
+  "amazonPrice": 44.99,
+  "baseDemand": 0.85,
+  "wow": 0.55,
+  "problemSolving": 0.75,
+  "impulse": 0.4,
+  "giftable": 0.55,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 20,
+   "ageMax": 50
+  },
+  "platformFit": {
+   "fadbook": 0.85,
+   "tiktak": 0.7
+  },
+  "bestAngles": [
+   "self_care",
+   "health",
+   "pain_point"
+  ],
+  "seasonality": [
+   1.8,
+   1.4,
+   0.9,
+   0.5,
+   0.35,
+   0.3,
+   0.3,
+   0.4,
+   0.8,
+   1.4,
+   1.75,
+   1.85
+  ],
+  "trendKind": "evergreen",
+  "competitors": 9,
+  "defectRate": 0.05,
+  "claimRisk": 0.2,
+  "rating": 4.5,
+  "brandable": 0.65
+ },
+ {
+  "id": "weighted-eye-mask",
+  "name": "Weighted Sleep Eye Mask",
+  "niche": "wellness",
+  "archetype": "solid",
+  "cogs": 4.4,
+  "shipCost": 1.9,
+  "perceivedValue": 24.99,
+  "amazonPrice": 22.99,
+  "baseDemand": 0.58,
+  "wow": 0.35,
+  "problemSolving": 0.6,
+  "impulse": 0.6,
+  "giftable": 0.5,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 22,
+   "ageMax": 50
+  },
+  "platformFit": {
+   "fadbook": 0.8,
+   "tiktak": 0.7
+  },
+  "bestAngles": [
+   "self_care",
+   "health",
+   "gift"
+  ],
+  "seasonality": [
+   1.05,
+   1,
+   1,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   1,
+   1,
+   1.05,
+   1.2
+  ],
+  "trendKind": "evergreen",
+  "competitors": 11,
+  "defectRate": 0.04,
+  "claimRisk": 0.2,
+  "rating": 4.7,
+  "brandable": 0.65
+ },
+ {
+  "id": "red-light-wand",
+  "name": "Red Light Therapy Wand",
+  "niche": "wellness",
+  "archetype": "emerging",
+  "cogs": 10.9,
+  "shipCost": 2.6,
+  "perceivedValue": 69.99,
+  "amazonPrice": 59.99,
+  "baseDemand": 0.82,
+  "wow": 0.75,
+  "problemSolving": 0.55,
+  "impulse": 0.4,
+  "giftable": 0.55,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 25,
+   "ageMax": 55
+  },
+  "platformFit": {
+   "fadbook": 0.85,
+   "tiktak": 0.85
+  },
+  "bestAngles": [
+   "self_care",
+   "savings",
+   "aspirational"
+  ],
+  "seasonality": [
+   1.05,
+   1,
+   1,
+   1,
+   1.1,
+   1,
+   0.9,
+   0.9,
+   0.95,
+   1,
+   1.15,
+   1.3
+  ],
+  "trendKind": "rising",
+  "competitors": 3,
+  "defectRate": 0.05,
+  "claimRisk": 0.5,
+  "rating": 4.6,
+  "brandable": 0.8
+ },
+ {
+  "id": "magnetic-phone-mount",
+  "name": "Magnetic Car Phone Mount",
+  "niche": "car",
+  "archetype": "dud",
+  "cogs": 1.7,
+  "shipCost": 1.4,
+  "perceivedValue": 8.99,
+  "amazonPrice": 7.99,
+  "baseDemand": 0.3,
+  "wow": 0.2,
+  "problemSolving": 0.45,
+  "impulse": 0.7,
+  "giftable": 0.1,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "male",
+   "ageMin": 18,
+   "ageMax": 55
+  },
+  "platformFit": {
+   "fadbook": 0.55,
+   "tiktak": 0.5
+  },
+  "bestAngles": [
+   "convenience",
+   "time_saving"
+  ],
+  "seasonality": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1.05,
+   1.05,
+   1,
+   1,
+   1,
+   1,
+   1.05
+  ],
+  "trendKind": "evergreen",
+  "competitors": 40,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.7,
+  "brandable": 0.2
+ },
+ {
+  "id": "seat-gap-filler",
+  "name": "Car Seat Gap Filler (2-pack)",
+  "niche": "car",
+  "archetype": "solid",
+  "cogs": 4.9,
+  "shipCost": 2.8,
+  "perceivedValue": 26.99,
+  "amazonPrice": 24.99,
+  "baseDemand": 0.62,
+  "wow": 0.45,
+  "problemSolving": 0.75,
+  "impulse": 0.75,
+  "giftable": 0.3,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 20,
+   "ageMax": 55
+  },
+  "platformFit": {
+   "fadbook": 0.8,
+   "tiktak": 0.75
+  },
+  "bestAngles": [
+   "pain_point",
+   "convenience"
+  ],
+  "seasonality": [
+   1,
+   0.95,
+   0.95,
+   1,
+   1,
+   1.05,
+   1.05,
+   1,
+   0.95,
+   1,
+   1.05,
+   1.15
+  ],
+  "trendKind": "evergreen",
+  "competitors": 17,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.5,
+  "brandable": 0.4
+ },
+ {
+  "id": "car-vacuum",
+  "name": "Cordless Handheld Car Vacuum",
+  "niche": "car",
+  "archetype": "solid",
+  "cogs": 11.4,
+  "shipCost": 4.2,
+  "perceivedValue": 49.99,
+  "amazonPrice": 39.99,
+  "baseDemand": 0.6,
+  "wow": 0.55,
+  "problemSolving": 0.7,
+  "impulse": 0.45,
+  "giftable": 0.35,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 22,
+   "ageMax": 55
+  },
+  "platformFit": {
+   "fadbook": 0.8,
+   "tiktak": 0.7
+  },
+  "bestAngles": [
+   "convenience",
+   "time_saving"
+  ],
+  "seasonality": [
+   1,
+   0.95,
+   1.05,
+   1.05,
+   1,
+   1,
+   1,
+   1,
+   0.95,
+   1,
+   1.1,
+   1.2
+  ],
+  "trendKind": "evergreen",
+  "competitors": 26,
+  "defectRate": 0.07,
+  "claimRisk": 0.02,
+  "rating": 4.5,
+  "brandable": 0.5
+ },
+ {
+  "id": "jump-starter",
+  "name": "Portable Car Jump Starter",
+  "niche": "car",
+  "archetype": "seasonal",
+  "cogs": 19.8,
+  "shipCost": 6.2,
+  "perceivedValue": 99.99,
+  "amazonPrice": 89.99,
+  "baseDemand": 0.85,
+  "wow": 0.6,
+  "problemSolving": 0.9,
+  "impulse": 0.35,
+  "giftable": 0.55,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 20,
+   "ageMax": 60
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "pain_point",
+   "savings",
+   "gift"
+  ],
+  "seasonality": [
+   1.9,
+   1.5,
+   0.9,
+   0.5,
+   0.4,
+   0.4,
+   0.45,
+   0.45,
+   0.6,
+   1,
+   1.5,
+   1.85
+  ],
+  "trendKind": "evergreen",
+  "competitors": 10,
+  "defectRate": 0.06,
+  "claimRisk": 0.05,
+  "rating": 4.6,
+  "brandable": 0.6
+ },
+ {
+  "id": "magsafe-charger-stand",
+  "name": "3-in-1 Foldable Magnetic Charger",
+  "niche": "gadgets",
+  "archetype": "saturated",
+  "cogs": 7.2,
+  "shipCost": 2.6,
+  "perceivedValue": 34.99,
+  "amazonPrice": 27.99,
+  "baseDemand": 0.72,
+  "wow": 0.55,
+  "problemSolving": 0.55,
+  "impulse": 0.55,
+  "giftable": 0.6,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 18,
+   "ageMax": 40
+  },
+  "platformFit": {
+   "fadbook": 0.7,
+   "tiktak": 0.8
+  },
+  "bestAngles": [
+   "convenience",
+   "aspirational",
+   "gift"
+  ],
+  "seasonality": [
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   1,
+   1,
+   0.95,
+   1,
+   1,
+   1,
+   1.2,
+   1.3
+  ],
+  "trendKind": "declining",
+  "competitors": 78,
+  "defectRate": 0.07,
+  "claimRisk": 0.02,
+  "rating": 4.5,
+  "brandable": 0.5
+ },
+ {
+  "id": "thermal-printer",
+  "name": "Mini Pocket Thermal Printer",
+  "niche": "gadgets",
+  "archetype": "winner",
+  "cogs": 8.6,
+  "shipCost": 2.4,
+  "perceivedValue": 49.99,
+  "amazonPrice": 39.99,
+  "baseDemand": 0.88,
+  "wow": 0.85,
+  "problemSolving": 0.35,
+  "impulse": 0.75,
+  "giftable": 0.8,
+  "repeatRate": 0.3,
+  "audience": {
+   "gender": "female",
+   "ageMin": 14,
+   "ageMax": 30
+  },
+  "platformFit": {
+   "fadbook": 0.55,
+   "tiktak": 0.95
+  },
+  "bestAngles": [
+   "aspirational",
+   "gift",
+   "curiosity"
+  ],
+  "seasonality": [
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   1,
+   1.25,
+   1.2,
+   1,
+   1.25,
+   1.5
+  ],
+  "trendKind": "rising",
+  "competitors": 7,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.8,
+  "brandable": 0.7
+ },
+ {
+  "id": "ring-light",
+  "name": "Selfie Ring Light with Tripod",
+  "niche": "gadgets",
+  "archetype": "saturated",
+  "cogs": 5.9,
+  "shipCost": 4.2,
+  "perceivedValue": 32.99,
+  "amazonPrice": 22.99,
+  "baseDemand": 0.7,
+  "wow": 0.35,
+  "problemSolving": 0.45,
+  "impulse": 0.5,
+  "giftable": 0.35,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 16,
+   "ageMax": 35
+  },
+  "platformFit": {
+   "fadbook": 0.55,
+   "tiktak": 0.8
+  },
+  "bestAngles": [
+   "aspirational",
+   "convenience"
+  ],
+  "seasonality": [
+   1,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   0.95,
+   1,
+   1.05,
+   1,
+   1,
+   1.1,
+   1.15
+  ],
+  "trendKind": "declining",
+  "competitors": 90,
+  "defectRate": 0.07,
+  "claimRisk": 0.02,
+  "rating": 4.5,
+  "brandable": 0.3
+ },
+ {
+  "id": "open-ear-buds",
+  "name": "Open-Ear Clip Earbuds",
+  "niche": "gadgets",
+  "archetype": "solid",
+  "cogs": 11.2,
+  "shipCost": 2.4,
+  "perceivedValue": 54.99,
+  "amazonPrice": 45.99,
+  "baseDemand": 0.62,
+  "wow": 0.5,
+  "problemSolving": 0.5,
+  "impulse": 0.4,
+  "giftable": 0.5,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 18,
+   "ageMax": 45
+  },
+  "platformFit": {
+   "fadbook": 0.7,
+   "tiktak": 0.8
+  },
+  "bestAngles": [
+   "convenience",
+   "health",
+   "aspirational"
+  ],
+  "seasonality": [
+   1.05,
+   0.95,
+   1,
+   1.05,
+   1.05,
+   1,
+   0.95,
+   0.95,
+   1,
+   1,
+   1.15,
+   1.2
+  ],
+  "trendKind": "evergreen",
+  "competitors": 21,
+  "defectRate": 0.07,
+  "claimRisk": 0.05,
+  "rating": 4.45,
+  "brandable": 0.55
+ },
+ {
+  "id": "retro-earbuds",
+  "name": "Transparent Retro Earbuds",
+  "niche": "gadgets",
+  "archetype": "trap",
+  "cogs": 5.4,
+  "shipCost": 2.1,
+  "perceivedValue": 42.99,
+  "amazonPrice": 34.99,
+  "baseDemand": 0.82,
+  "wow": 0.9,
+  "problemSolving": 0.15,
+  "impulse": 0.8,
+  "giftable": 0.6,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 16,
+   "ageMax": 30
+  },
+  "platformFit": {
+   "fadbook": 0.5,
+   "tiktak": 0.95
+  },
+  "bestAngles": [
+   "aspirational",
+   "curiosity",
+   "gift"
+  ],
+  "seasonality": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1.05,
+   1,
+   1,
+   1.15,
+   1.25
+  ],
+  "trendKind": "fad",
+  "competitors": 5,
+  "defectRate": 0.3,
+  "claimRisk": 0.02,
+  "rating": 4.6,
+  "brandable": 0.35
+ },
+ {
+  "id": "baby-nail-trimmer",
+  "name": "Electric Baby Nail Trimmer",
+  "niche": "baby",
+  "archetype": "winner",
+  "cogs": 4.4,
+  "shipCost": 2,
+  "perceivedValue": 29.99,
+  "amazonPrice": 26.99,
+  "baseDemand": 0.86,
+  "wow": 0.6,
+  "problemSolving": 0.95,
+  "impulse": 0.65,
+  "giftable": 0.55,
+  "repeatRate": 0.05,
+  "audience": {
+   "gender": "female",
+   "ageMin": 22,
+   "ageMax": 40
+  },
+  "platformFit": {
+   "fadbook": 0.95,
+   "tiktak": 0.75
+  },
+  "bestAngles": [
+   "parenting",
+   "pain_point",
+   "gift"
+  ],
+  "seasonality": [
+   1,
+   1,
+   1,
+   1,
+   1.05,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1.05
+  ],
+  "trendKind": "evergreen",
+  "competitors": 8,
+  "defectRate": 0.04,
+  "claimRisk": 0.05,
+  "rating": 4.8,
+  "brandable": 0.75
+ },
+ {
+  "id": "white-noise-machine",
+  "name": "Portable White Noise Machine",
+  "niche": "baby",
+  "archetype": "solid",
+  "cogs": 6.2,
+  "shipCost": 2.4,
+  "perceivedValue": 29.99,
+  "amazonPrice": 24.99,
+  "baseDemand": 0.62,
+  "wow": 0.3,
+  "problemSolving": 0.8,
+  "impulse": 0.5,
+  "giftable": 0.5,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 22,
+   "ageMax": 40
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "parenting",
+   "pain_point",
+   "health"
+  ],
+  "seasonality": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1.05
+  ],
+  "trendKind": "evergreen",
+  "competitors": 23,
+  "defectRate": 0.04,
+  "claimRisk": 0.15,
+  "rating": 4.7,
+  "brandable": 0.6
+ },
+ {
+  "id": "busy-board",
+  "name": "Montessori Busy Board",
+  "niche": "kids",
+  "archetype": "seasonal",
+  "cogs": 8.3,
+  "shipCost": 4.6,
+  "perceivedValue": 44.99,
+  "amazonPrice": 36.99,
+  "baseDemand": 0.85,
+  "wow": 0.6,
+  "problemSolving": 0.55,
+  "impulse": 0.45,
+  "giftable": 0.95,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 25,
+   "ageMax": 40
+  },
+  "platformFit": {
+   "fadbook": 0.95,
+   "tiktak": 0.65
+  },
+  "bestAngles": [
+   "parenting",
+   "gift",
+   "aspirational"
+  ],
+  "seasonality": [
+   0.55,
+   0.45,
+   0.45,
+   0.4,
+   0.45,
+   0.4,
+   0.45,
+   0.5,
+   0.6,
+   0.9,
+   1.6,
+   1.8
+  ],
+  "trendKind": "evergreen",
+  "competitors": 15,
+  "defectRate": 0.05,
+  "claimRisk": 0.05,
+  "rating": 4.7,
+  "brandable": 0.65
+ },
+ {
+  "id": "drawing-projector",
+  "name": "Kids Drawing Projector",
+  "niche": "kids",
+  "archetype": "solid",
+  "cogs": 7.8,
+  "shipCost": 3,
+  "perceivedValue": 36.99,
+  "amazonPrice": 32.99,
+  "baseDemand": 0.6,
+  "wow": 0.65,
+  "problemSolving": 0.35,
+  "impulse": 0.5,
+  "giftable": 0.75,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 25,
+   "ageMax": 42
+  },
+  "platformFit": {
+   "fadbook": 0.85,
+   "tiktak": 0.75
+  },
+  "bestAngles": [
+   "parenting",
+   "gift",
+   "curiosity"
+  ],
+  "seasonality": [
+   0.7,
+   0.7,
+   0.75,
+   0.75,
+   0.8,
+   0.85,
+   0.9,
+   0.95,
+   0.9,
+   1,
+   1.3,
+   1.6
+  ],
+  "trendKind": "evergreen",
+  "competitors": 12,
+  "defectRate": 0.06,
+  "claimRisk": 0.05,
+  "rating": 4.5,
+  "brandable": 0.5
+ },
+ {
+  "id": "magnetic-tiles",
+  "name": "Magnetic Building Tiles (60pc)",
+  "niche": "kids",
+  "archetype": "saturated",
+  "cogs": 14.2,
+  "shipCost": 6.4,
+  "perceivedValue": 59.99,
+  "amazonPrice": 49.99,
+  "baseDemand": 0.74,
+  "wow": 0.6,
+  "problemSolving": 0.35,
+  "impulse": 0.35,
+  "giftable": 0.85,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 25,
+   "ageMax": 42
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "parenting",
+   "gift",
+   "aspirational"
+  ],
+  "seasonality": [
+   0.8,
+   0.75,
+   0.8,
+   0.8,
+   0.85,
+   0.85,
+   0.85,
+   0.9,
+   0.9,
+   1,
+   1.4,
+   1.75
+  ],
+  "trendKind": "evergreen",
+  "competitors": 64,
+  "defectRate": 0.05,
+  "claimRisk": 0.05,
+  "rating": 4.7,
+  "brandable": 0.45
+ },
+ {
+  "id": "anti-theft-backpack",
+  "name": "Anti-Theft Travel Backpack",
+  "niche": "fashion",
+  "archetype": "solid",
+  "cogs": 13.6,
+  "shipCost": 5.2,
+  "perceivedValue": 59.99,
+  "amazonPrice": 49.99,
+  "baseDemand": 0.6,
+  "wow": 0.45,
+  "problemSolving": 0.6,
+  "impulse": 0.35,
+  "giftable": 0.35,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 18,
+   "ageMax": 45
+  },
+  "platformFit": {
+   "fadbook": 0.85,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "pain_point",
+   "convenience",
+   "aspirational"
+  ],
+  "seasonality": [
+   0.9,
+   0.85,
+   0.9,
+   0.95,
+   1,
+   1.15,
+   1.15,
+   1.3,
+   1.05,
+   0.9,
+   0.95,
+   1.1
+  ],
+  "trendKind": "evergreen",
+  "competitors": 20,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.6,
+  "brandable": 0.55
+ },
+ {
+  "id": "minimalist-wallet",
+  "name": "Slim RFID Minimalist Wallet",
+  "niche": "fashion",
+  "archetype": "saturated",
+  "cogs": 3.6,
+  "shipCost": 1.8,
+  "perceivedValue": 24.99,
+  "amazonPrice": 19.99,
+  "baseDemand": 0.72,
+  "wow": 0.45,
+  "problemSolving": 0.5,
+  "impulse": 0.7,
+  "giftable": 0.7,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "male",
+   "ageMin": 20,
+   "ageMax": 50
+  },
+  "platformFit": {
+   "fadbook": 0.85,
+   "tiktak": 0.7
+  },
+  "bestAngles": [
+   "convenience",
+   "aspirational",
+   "gift"
+  ],
+  "seasonality": [
+   0.9,
+   0.95,
+   0.95,
+   0.95,
+   1,
+   1.35,
+   0.95,
+   0.9,
+   0.95,
+   1,
+   1.2,
+   1.5
+  ],
+  "trendKind": "declining",
+  "competitors": 72,
+  "defectRate": 0.05,
+  "claimRisk": 0.02,
+  "rating": 4.6,
+  "brandable": 0.55
+ },
+ {
+  "id": "claw-clip-set",
+  "name": "Claw Clip Set (6pc)",
+  "niche": "fashion",
+  "archetype": "dud",
+  "cogs": 2.3,
+  "shipCost": 1.7,
+  "perceivedValue": 9.99,
+  "amazonPrice": 9.99,
+  "baseDemand": 0.3,
+  "wow": 0.25,
+  "problemSolving": 0.1,
+  "impulse": 0.85,
+  "giftable": 0.3,
+  "repeatRate": 0.03,
+  "audience": {
+   "gender": "female",
+   "ageMin": 16,
+   "ageMax": 40
+  },
+  "platformFit": {
+   "fadbook": 0.5,
+   "tiktak": 0.8
+  },
+  "bestAngles": [
+   "aspirational",
+   "savings"
+  ],
+  "seasonality": [
+   1,
+   1,
+   1,
+   1,
+   1.05,
+   1.1,
+   1.1,
+   1.05,
+   1,
+   0.95,
+   1,
+   1.05
+  ],
+  "trendKind": "evergreen",
+  "competitors": 28,
+  "defectRate": 0.06,
+  "claimRisk": 0.02,
+  "rating": 4.7,
+  "brandable": 0.3
+ },
+ {
+  "id": "heated-vest",
+  "name": "USB Heated Vest",
+  "niche": "outdoor",
+  "archetype": "seasonal",
+  "cogs": 12.6,
+  "shipCost": 4.9,
+  "perceivedValue": 74.99,
+  "amazonPrice": 59.99,
+  "baseDemand": 0.85,
+  "wow": 0.65,
+  "problemSolving": 0.8,
+  "impulse": 0.4,
+  "giftable": 0.6,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "male",
+   "ageMin": 25,
+   "ageMax": 60
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "pain_point",
+   "gift",
+   "convenience"
+  ],
+  "seasonality": [
+   1.75,
+   1.3,
+   0.6,
+   0.3,
+   0.22,
+   0.2,
+   0.2,
+   0.25,
+   0.5,
+   1.2,
+   1.8,
+   1.95
+  ],
+  "trendKind": "evergreen",
+  "competitors": 12,
+  "defectRate": 0.07,
+  "claimRisk": 0.05,
+  "rating": 4.5,
+  "brandable": 0.55
+ },
+ {
+  "id": "solar-firefly-lights",
+  "name": "Solar Firefly Garden Lights",
+  "niche": "outdoor",
+  "archetype": "seasonal",
+  "cogs": 4.6,
+  "shipCost": 2.9,
+  "perceivedValue": 29.99,
+  "amazonPrice": 24.99,
+  "baseDemand": 0.85,
+  "wow": 0.8,
+  "problemSolving": 0.15,
+  "impulse": 0.7,
+  "giftable": 0.4,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 28,
+   "ageMax": 65
+  },
+  "platformFit": {
+   "fadbook": 0.95,
+   "tiktak": 0.7
+  },
+  "bestAngles": [
+   "aspirational",
+   "gift",
+   "curiosity"
+  ],
+  "seasonality": [
+   0.25,
+   0.35,
+   0.8,
+   1.5,
+   1.9,
+   1.8,
+   1.5,
+   1.1,
+   0.7,
+   0.45,
+   0.35,
+   0.35
+  ],
+  "trendKind": "evergreen",
+  "competitors": 18,
+  "defectRate": 0.08,
+  "claimRisk": 0.02,
+  "rating": 4.4,
+  "brandable": 0.4
+ },
+ {
+  "id": "bug-zapper-lamp",
+  "name": "Rechargeable Bug Zapper Lamp",
+  "niche": "outdoor",
+  "archetype": "seasonal",
+  "cogs": 6.4,
+  "shipCost": 3.2,
+  "perceivedValue": 36.99,
+  "amazonPrice": 29.99,
+  "baseDemand": 0.85,
+  "wow": 0.65,
+  "problemSolving": 0.85,
+  "impulse": 0.6,
+  "giftable": 0.1,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "all",
+   "ageMin": 25,
+   "ageMax": 65
+  },
+  "platformFit": {
+   "fadbook": 0.9,
+   "tiktak": 0.7
+  },
+  "bestAngles": [
+   "pain_point",
+   "convenience",
+   "health"
+  ],
+  "seasonality": [
+   0.2,
+   0.25,
+   0.4,
+   0.8,
+   1.45,
+   1.95,
+   2,
+   1.7,
+   0.9,
+   0.45,
+   0.25,
+   0.2
+  ],
+  "trendKind": "evergreen",
+  "competitors": 20,
+  "defectRate": 0.06,
+  "claimRisk": 0.15,
+  "rating": 4.5,
+  "brandable": 0.45
+ },
+ {
+  "id": "heated-throw",
+  "name": "Heated Throw Blanket",
+  "niche": "home",
+  "archetype": "seasonal",
+  "cogs": 15.2,
+  "shipCost": 5.9,
+  "perceivedValue": 74.99,
+  "amazonPrice": 59.99,
+  "baseDemand": 0.85,
+  "wow": 0.45,
+  "problemSolving": 0.7,
+  "impulse": 0.45,
+  "giftable": 0.8,
+  "repeatRate": 0,
+  "audience": {
+   "gender": "female",
+   "ageMin": 25,
+   "ageMax": 65
+  },
+  "platformFit": {
+   "fadbook": 0.95,
+   "tiktak": 0.6
+  },
+  "bestAngles": [
+   "self_care",
+   "gift",
+   "savings"
+  ],
+  "seasonality": [
+   1.6,
+   1.2,
+   0.5,
+   0.3,
+   0.22,
+   0.2,
+   0.2,
+   0.25,
+   0.5,
+   1.25,
+   1.75,
+   1.9
+  ],
+  "trendKind": "evergreen",
+  "competitors": 22,
+  "defectRate": 0.05,
+  "claimRisk": 0.05,
+  "rating": 4.6,
+  "brandable": 0.6
+ }
+]

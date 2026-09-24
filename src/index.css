@@ -1,0 +1,5 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body { font-family: Fredoka, Inter, system-ui, sans-serif; background: #1b1530; color: #241a3d; -webkit-font-smoothing: antialiased; }
+button, input, select, textarea { font: inherit; }
+img { max-width: 100%; }
